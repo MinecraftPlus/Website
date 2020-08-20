@@ -57,18 +57,20 @@
         <div class="container">
             {{ content }}
 			
-			<hr>
-			<h2>Zależności z innymi modyfikacjami</h2>
-			{% for dependency in meta.dependencies %}
-				<!--<li>{{ dependency.id }}&nbsp;{{ dependency.desc }}&nbsp;{{ dependency.type }}</li>-->
-				<ul>
-				{% for page in pages if page.title == dependency.id %}
-					<li>
-						{% if dependency.type == "dependent" %}Zależna od&nbsp;{% elseif dependency.type == "extension" %}Uzupełniająca dla&nbsp;{% endif %}<a href="{{ page.url }}">{{ page.title }}</a> -&nbsp;{{ dependency.desc }}
-					</li>
+			{% if not meta.Dependencies is empty %}
+				<hr>
+				<h2>Zależności z innymi modyfikacjami</h2>
+				{% for dependency in meta.Dependencies %}
+					<!--<li>{{ dependency.id }}&nbsp;{{ dependency.desc }}&nbsp;{{ dependency.type }}</li>-->
+					<ul>
+					{% for page in pages if page.title == dependency.id %}
+						<li>
+							{% if dependency.type == "dependent" %}Zależna od&nbsp;{% elseif dependency.type == "extension" %}Uzupełniająca dla&nbsp;{% endif %}<a href="{{ page.url }}">{{ page.title }}</a> -&nbsp;{{ dependency.desc }}
+						</li>
+					{% endfor %}
+					</ul>
 				{% endfor %}
-				</ul>
-			{% endfor %}
+			{% endif %}
         </div>
     </div>
 
