@@ -1,6 +1,6 @@
 ---
 Title: Animator Update
-Description: Aktualizacja
+Description: Aktualizacja zmieniająca sposób animacji obiektów w grze
 Author: Wituch
 Date:
 
@@ -18,3 +18,4 @@ Dependencies:
 # Animator Update
 -----
 
+Opis aktualizacji jest jeszcze niedostępny.

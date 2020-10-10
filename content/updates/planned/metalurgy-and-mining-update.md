@@ -6,7 +6,7 @@ Date:
 
 Template: page-update
 
-Dependencies:
+-Dependencies:
     - id: Dep Update
       desc: desc of dependency
       type: dependent
@@ -15,5 +15,7 @@ Dependencies:
       type: extension
 ---
 
-# Metalurgy & Mining Update - statystyki postaci
+# Metalurgy & Mining Update
 -----
+
+Opis aktualizacji jest jeszcze niedostępny.

@@ -12,9 +12,7 @@ Dependencies:
       type: extension
 ---
 
-Money Update - czas to pieniądz
+# Interactions Update
 -----
 
-Aktualizacja zmieniająca sposób interakcji z otoczeniem. 
-
-c.d.n.
+Opis aktualizacji jest jeszcze niedostępny.

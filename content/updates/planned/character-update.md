@@ -6,7 +6,7 @@ Date:
 
 Template: page-update
 
-Dependencies:
+-Dependencies:
     - id: Dep Update
       desc: desc of dependency
       type: dependent
@@ -17,3 +17,5 @@ Dependencies:
 
 # Character Update - statystyki postaci
 -----
+
+Opis aktualizacji jest jeszcze niedostępny.

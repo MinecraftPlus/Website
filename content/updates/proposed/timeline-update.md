@@ -18,4 +18,6 @@ Dependencies:
 # Timeline Update
 -----
 
+Opis aktualizacji jest jeszcze niedostępny.
+
 <!--Dzieci mają ograniczone mozliwosci akcji w grze, jednak ze wzgledu na dluzszy okres zycia otrzymuja wiecej punktow rozwoju + dodatkowy bonus za wieksze zdolnosci do nauki-->
