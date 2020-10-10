@@ -2,32 +2,25 @@
 Title: Pobieranie
 Description: Strona pobierania
 Author: Wituch
-Date: 2001-04-25
+Date: 2020-10-10
 Robots: noindex,nofollow
 Template: index
 ---
 
-# Pobieranie MC+ (CB+)
+Każda wersja MinecraftPlus działa tak samo jak oryginalny Minecraft. Do uruchomienia gry potrzebny jest launcher Minecraft (dowolny, obsługujący oryginalne pliki konfiguracyjne `.json` wersji).
 
-Jeśli chcesz uruchomić klienta lub server w wersji MiecraftPlus musisz pobrać odpowiedni instalator z sekcji [linki do pobierania](#links).
+# Pobieranie klienta MC+
 
-# Budowanie MC+ (CB+)
+Aby uruchomić klienta gry w wydaniu MiecraftPlus musisz pobrać odpowiedni nagłówek wersji z poniższej listy:
 
-Po pobraniu wystarczy uruchomić skrypt install.bat(sh), który automatycznie pobierze oryginalną wersję z serwerów Mojang i zaktualizuje ją do wersji Minecraft+.  
-Gotowe pliki zostaną zapisane w folderze instalatora.
+ * [0.0.1-SNAPSHOT - *Cannon Update S1*](%assets_url%/downloads/minecraftplus-0.0.1-SNAPSHOT.json)
+
+# Instalacja klienta MC+
+
+Pobrany plik konfiguracyjny wersji `minecraftplus-x.x.x.json` (lub dla wersji przejściowych `minecraftplus-x.x.x-SNAPSHOT.json`) należy umieścić w folderze o takiej samej nazwie jak plik, bez rozszerzenia `.json`.
+Tak przygotowany folder z zawartym w nim plikiem konfiguracyjnym, należy przenieść do folderu wersji `.minecraft/versions/` z którego korzysta używany launcher Minecraft.
 
 # Uruchamianie klienta MC+
 
-Zbudowana przez instalator wersja MinecraftPlus działa tak samo jak oryginalny Minecraft. Wygenerowany przez instalator folder z wersją `minecraftplus-x.x.x` należy skopiować do folderu `.minecraft/versions/`.  
-Do uruchomienia gry potrzebny jest launcher Minecraft (lub dowolny zamiennik).
-
-# Uruchamianie serwera MC+ (CB+)
-
-Wygenerowany przez instalator plik wykonywalny `minecraftplus-server-x.x.x` uruchamia się tak jak oryginalny serwer Minecraft. To samo dotyczy wersji CraftBukkitPlus (CB+).  
-Aby uruchomić serwer  można użyć komendy `java -jar minecraftplus-server-x.x.x` lub `java -jar craftbukkitplus-server-x.x.x`
-
-
-#Linki do pobierania: {#links}
-- [Instalator Minecraft+ Client](%assets_url%/download/minecraftplus-client.zip)
-- [Instalator Minecraft+ Server](%assets_url%/download/minecraftplus-server.zip)
-- [Instalator CraftBukkit+ Server](%assets_url%/download/craftbukkitplus-server.zip)
+Aby uruchomić grę w wersji MinecraftPlus należy w launcherze gry dodać nową wersję. W tym celu należy skonfigurować nową instalację, która wykorzystywać będzie pobraną wersję gry.
+Należy zwrócić uwagę na rodzaj pobranej wersji - w przypadku gdy nazwa zawiera słowo `SNAPSHOT` jest to wydanie przejściowe i w launcherze należy odblokować używanie wersji przejściowych.
