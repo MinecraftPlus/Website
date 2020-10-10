@@ -13,8 +13,11 @@ Dependencies:
     - id: Character Update
       desc: Poprzez wpływ biomu na obszarze w którym znajduje się postać gracza np. drastyczny spadek temperatury ciała w biomach zimnych, śnieżnych
       type: extension
+    - id: Food Update
+      desc: Poprzez lepszą regulację występowania roślin w różnych obszarach mapy, zależnie od biomu
+      type: extension
     - id: Animal Update
-      desc: Poprzez lepszą regulację występowania w różnych obszarach mapy, zależnie od biomu
+      desc: Poprzez lepszą regulację występowania zwierząt w różnych obszarach mapy, zależnie od biomu
       type: extension
 ---
 
