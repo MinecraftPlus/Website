@@ -40,7 +40,7 @@ Właśnie po to powstał ten projekt, by skroić najlepsze zmiany pod konkretne 
 Aktualnie projekt znajduje się w **wczesnej fazie rozwoju**. Pierwsze wykonane kroki przed udostępnieniem projektu publicznie, polegały na skompletowaniu kodu źródłowego wszystkich elementów składowych i połączenie ich w kompletny system.
 Pozwoliło to na zbudowanie pierwszego działającego wydania, pozbawionego jakichkolwiek zmian względem oryginalnej wersji gry, opartego na posiadanym kodzie źródłowym. Ułatwiło to testowanie poprawności działania „gołego” MC+, ponieważ zachowywał się on dokładnie tak samo, jak oryginał. Dotychczasowe testy wyłapały kilka błędów, które zostały rozwiązane.
 
-W celu zebrania feedbacku od społeczności i zbadania zainteresowania w pierwszej kolejności udostępniono pokazową modyfikację [Cannon-Update](?updates/cannon-update) dodającą do gry działa i kule armatnie. Modyfikacja ma być rozwiązaniem na nieestetyczną realizację „dział” za pomocą TNT.
+W celu zebrania feedbacku od społeczności i zbadania zainteresowania w pierwszej kolejności udostępniono pokazową modyfikację [Cannon Update](?updates/released/cannon-update) dodającą do gry działa i kule armatnie. Modyfikacja ma być rozwiązaniem na nieestetyczną realizację „dział” za pomocą TNT.
 
 # Na jakiej wersji bazuje MC+?
 
@@ -99,7 +99,7 @@ Kolejnymi krokami zaplanowanymi dla projektu jest:
 
 Lista planowanych modyfikacji jest długa (a zawiera tylko najważniejsze pomysły) niełatwo jest określić konkretny przebieg prac. Dlatego jak wspomniano wcześniej:
 
-> W celu zebrania feedbacku od społeczności i zbadania zainteresowania w pierwszej kolejności udostępniono pokazową modyfikację [Cannon-Update](?updates/cannon-update) dodającą do gry działa i kule armatnie. Modyfikacja ma być rozwiązaniem na nieestetyczną realizację „dział” za pomocą TNT.
+> W celu zebrania feedbacku od społeczności i zbadania zainteresowania w pierwszej kolejności udostępniono pokazową modyfikację [Cannon Update](?updates/released/cannon-update) dodającą do gry działa i kule armatnie. Modyfikacja ma być rozwiązaniem na nieestetyczną realizację „dział” za pomocą TNT.
 
 W skrócie przyszłość tego projektu zależy wyłącznie od jego odbioru przez szersze grono graczy i twórców serwerów Minecraft.
 
