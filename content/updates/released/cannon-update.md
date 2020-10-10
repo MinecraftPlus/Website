@@ -10,7 +10,7 @@ Dependencies:
     - id: Block Mechanics Update
       desc: Poprzez zmianę systemu niszczenia bloków, w której blok po otrzymaniu obrażeń po trafieniu przez pocisk, niewystarczających do jego zniszczenia, przetrzymuje te informacje (na bloku widać ślad obrażeń, pęknięcia). Jeśli blok otrzyma kolejne obrażenia, zsumują się one z poprzednimi i jeśli przekroczą one wytrzymałość bloku ulegnie on zniszczeniu.
       type: dependent
-	  - id: Interactions Update
+    - id: Interactions Update
       desc: Poprzez zmianę systemu interakcji pozwalającą na wygodniejsze korzystanie i obsługę dział.
       type: dependent
 ---
