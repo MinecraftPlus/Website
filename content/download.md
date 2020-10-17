@@ -13,8 +13,8 @@ Każda wersja MinecraftPlus działa tak samo jak oryginalny Minecraft. Do urucho
 
 Aby uruchomić klienta gry w wydaniu MiecraftPlus musisz pobrać odpowiednią konfigurację wersji z poniższej listy:
 
- * [0.0.1 - *Cannon Update R1*](%assets_url%/downloads/minecraft/minecraftplus-0.0.1.json)
- * [0.0.1-SNAPSHOT - *Cannon Update S1*](%assets_url%/downloads/minecraftplus-0.0.1-SNAPSHOT.json)
+ * <a href="%assets_url%/downloads/minecraft/minecraftplus-0.0.1.json" download>0.0.1 - *Cannon Update R1*</a>
+ * <a href="%assets_url%/downloads/minecraft/minecraftplus-0.0.1-SNAPSHOT.json" download>0.0.1-SNAPSHOT - *Cannon Update S1*</a>
 
 # Instalacja klienta MC+
 
