@@ -15,6 +15,8 @@ Aby uruchomić klienta gry w wydaniu MiecraftPlus musisz pobrać odpowiednią ko
 
  * <a href="%assets_url%/downloads/minecraft/minecraftplus-0.0.1.json" download>0.0.1 - *Cannon Update R1*</a>
  * <a href="%assets_url%/downloads/minecraft/minecraftplus-0.0.1-SNAPSHOT.json" download>0.0.1-SNAPSHOT - *Cannon Update S1*</a>
+ 
+W przypadku problemu z pobieraniem, kliknij na link PPM i wybierz "Zapisz link jako...".
 
 # Instalacja klienta MC+
 
