@@ -37,10 +37,13 @@ Właśnie po to powstał ten projekt, by skroić najlepsze zmiany pod konkretne 
 
 # Na jakim etapie znajduje się projekt?
 
-Aktualnie projekt znajduje się w **wczesnej fazie rozwoju**. Pierwsze wykonane kroki przed udostępnieniem projektu publicznie, polegały na skompletowaniu kodu źródłowego wszystkich elementów składowych i połączenie ich w kompletny system.
-Pozwoliło to na zbudowanie pierwszego działającego wydania, pozbawionego jakichkolwiek zmian względem oryginalnej wersji gry, opartego na posiadanym kodzie źródłowym. Ułatwiło to testowanie poprawności działania „gołego” MC+, ponieważ zachowywał się on dokładnie tak samo, jak oryginał. Dotychczasowe testy wyłapały kilka błędów, które zostały rozwiązane.
+Aktualnie projekt znajduje się w **fazie ukończenia wydania pierwszej aktualizacji**.
 
-W celu zebrania feedbacku od społeczności i zbadania zainteresowania w pierwszej kolejności udostępniono pokazową modyfikację [Cannon Update](?updates/released/cannon-update) dodającą do gry działa i kule armatnie. Modyfikacja ma być rozwiązaniem na nieestetyczną realizację „dział” za pomocą TNT.
+Pierwsze wykonane kroki przed udostępnieniem projektu publicznie, polegały na skompletowaniu kodu źródłowego wszystkich elementów składowych i połączenie ich w kompletny system.
+Pozwoliło to na zbudowanie pierwszego działającego wydania, pozbawionego jakichkolwiek zmian względem oryginalnej wersji gry, opartego na posiadanym kodzie źródłowym. Ułatwiło to testowanie poprawności działania „gołego” MC+, ponieważ zachowywał się on dokładnie tak samo, jak oryginał. Dotychczasowe testy wyłapały kilka błędów, które zostały rozwiązane.  
+Następnie zintegrowano zmiany pochodzące z CraftBukkit z podstawową wersją MC+. Pozwoliło to uzyskać działające wydanie, bez żadnych zmian względem oryginalnej wersji gry, z możliwością uruchamiania pluginów opartych o API Bukkit. Seria podstawowych testów pozwoliła kilka z nich wyłapać i rozwiązać.
+
+W celu zaprezentowania nieograniczonych możliwości projektu oraz zebrania feedbacku od społeczności i zbadania zainteresowania, w pierwszej kolejności zdecydowano o udostępnieniu pokazowej modyfikacji [Cannon Update](?updates/released/cannon-update) dodającą do gry działa i kule armatnie. Modyfikacja ma być rozwiązaniem na nieestetyczną realizację „dział” za pomocą TNT.
 
 # Na jakiej wersji bazuje MC+?
 
@@ -51,19 +54,21 @@ Przed rozpoczęciem prac nad dodawaniem zmian, cały projekt otrzymał odpowiedn
 
 W skład projektu wchodzi:
 - MinecraftPlus-Client - aplikacja klienta gry wraz z modyfikacjami
-- MinecraftPlus-Server* - aplikacja serwera gry wraz z modyfikacjami
-- CraftBukkitPlus-Server* aplikacja serwera gry wraz z modyfikacjami i API Bukkit** pozwalającym uruchamiać pluginy
+- MinecraftPlus-Server - aplikacja serwera gry wraz z modyfikacjami
+- CraftBukkitPlus-Server* - aplikacja serwera gry wraz z modyfikacjami i API Bukkit** pozwalającym uruchamiać pluginy
+- BukkitPlus\*** - API Bukkit uzupełnione o modyfikacje z projektu
 - AuthServerLibrary* - biblioteka pozwalająca na autoryzację graczy na serwerze bez pluginów (zamiennik do AuthLib)
 
-\* aktualnie niedostępne, ze względu na wczesną fazę projektu, które udostępnione zostaną w momencie silnego zaangażowania społeczności, zainteresowanej projektem.  
-\** wariacje projektu oparte na tym API jak Spigot lub Paper są przewidywane w przypadku naprawdę dużego zapotrzebowania.
+\* aktualnie niedostępne, prace nad integracją zmian z aktualizacji [Cannon Update](?updates/released/cannon-update)  
+\*\* wariacje projektu oparte na tym API jak Spigot lub Paper są przewidywane w przypadku naprawdę dużego zapotrzebowania  
+\*\*\* aktualnie niedostępne z uwagi na prace nad *CraftBukkitPlus*  
 
 # Do kogo skierowany jest projekt?
 
-Z uwagi na charakter modyfikacji, które skupiają się głównie na rozbudowaniu mechanizmów przetrwania, rozszerzeniu dostępnych rud, materiałów, receptur, sposobów wytwarzania, przetwarzania itp. projekt jest skierowany głównie do graczy oraz twórców serwerów, którzy utrzymują rozgrywkę w klimacie survivalu (patrz niżej).
+Z uwagi na charakter modyfikacji, które skupiają się głównie na rozbudowaniu mechanizmów przetrwania, rozszerzeniu dostępnych rud, materiałów, receptur, sposobów wytwarzania, przetwarzania itp. projekt jest skierowany głównie do graczy oraz twórców serwerów, którzy utrzymują rozgrywkę w klimacie **survivalu** (patrz niżej).
 Poza uniwersalnymi zmianami, które tak naprawdę pasowałyby do dowolnego typu serwera, projekt nastawiony jest na rozwój funkcjonalności, które od zawsze były bolączką serwerów RPG (patrz niżej).
 
-Jeśli więc lubisz grać lub tworzysz serwer w klimacie survivalu, szczególnie z elementami RPG to ten projekt jest idealny dla Ciebie!
+Jeśli więc lubisz grać lub tworzysz serwer w klimacie survivalu, szczególnie z elementami **RPG** (patrz niżej) to ten projekt jest idealny dla Ciebie!
 
 # Dlaczego ten projekt pasuje do serwerów Survival?
 
@@ -88,18 +93,19 @@ Projekt będzie oferował natywne wsparcie dla interakcji z NPC poprzez odpowied
 # Jak używać MC+?
 
 Jeśli chcesz uruchomić klienta lub serwer w wydaniu MiecraftPlus, musisz pobrać odpowiedni instalator z sekcji [Pobieranie](?download).
-Znajdziesz tam informacje o tym, skąd i jak pobrać odpowiedni instalator oraz jak go użyć by, otrzymać gotowe pliki pozwalające uruchomić MC+.
+Znajdziesz tam informacje o tym, skąd i jak pobrać odpowiednią konfigurację wersji pozwalającą uruchomić klienta lub serwer MC+.
 
 # Plany na przyszłość:
 
 Kolejnymi krokami zaplanowanymi dla projektu jest:
 - zbudowanie zaufanej społeczności zainteresowanej korzystaniem z MC+
-- stworzenie instalatora/launchera automatyzującego instalację MC+
+- stworzenie instalatora pozwalającego wykorzystywać pliki [delta](https://www.techwalla.com/articles/what-is-a-delta-file) do generowania plików wykonywalnych MC+
+- zastąpienie instalatora launcherem automatyzującego instalację MC+
 - integracja zaplanowanych modyfikacji.
 
 Lista planowanych modyfikacji jest długa (a zawiera tylko najważniejsze pomysły) niełatwo jest określić konkretny przebieg prac. Dlatego jak wspomniano wcześniej:
 
-> W celu zebrania feedbacku od społeczności i zbadania zainteresowania w pierwszej kolejności udostępniono pokazową modyfikację [Cannon Update](?updates/released/cannon-update) dodającą do gry działa i kule armatnie. Modyfikacja ma być rozwiązaniem na nieestetyczną realizację „dział” za pomocą TNT.
+> W celu zebrania feedbacku od społeczności i zbadania zainteresowania w pierwszej kolejności udostępniłem pokazową modyfikację [Cannon Update](?updates/released/cannon-update) dodającą do gry działa i kule armatnie. Modyfikacja ma być rozwiązaniem na nieestetyczną realizację „dział” za pomocą TNT.
 
 W skrócie przyszłość tego projektu zależy wyłącznie od jego odbioru przez szersze grono graczy i twórców serwerów Minecraft.
 
