@@ -11,12 +11,31 @@ Każda wersja MinecraftPlus działa tak samo jak oryginalny Minecraft. Do urucho
 
 # Pobieranie klienta MC+
 
-Aby uruchomić klienta gry w wydaniu MiecraftPlus musisz pobrać odpowiednią konfigurację wersji z poniższej listy:
-
- * <a href="%assets_url%/downloads/minecraft/minecraftplus-0.0.1.json" download>0.0.1 - *Cannon Update R1*</a>
- * <a href="%assets_url%/downloads/minecraft/minecraftplus-0.0.1-SNAPSHOT.json" download>0.0.1-SNAPSHOT - *Cannon Update S1*</a>
- 
+Aby uruchomić klienta gry w wydaniu MiecraftPlus musisz pobrać odpowiednią konfigurację wersji z poniższej listy, a następnie ją zainstalować.  
 W przypadku problemu z pobieraniem, kliknij na link PPM i wybierz "Zapisz link jako...".
+
+<table style="table-layout: fixed; width: 100%">
+	<colgroup><col style="width: 35%"><col style="width: 35%"><col style="width: auto"></colgroup>
+	<thead><tr><th>Nazwa wydania</th><th>Wersja</th><th>Link</th></tr></thead>
+	<tbody>
+	  <tr>
+		<td rowspan="2">Cannon Update</td>
+		<td>0.0.1</td>
+		<td><a href="%assets_url%/downloads/minecraft/minecraftplus-0.0.1.json">pobierz</a></td>
+	  </tr>
+	  <tr>
+		<td>0.0.1-SNAPSHOT</td>
+		<td><a href="%assets_url%/downloads/minecraft/minecraftplus-0.0.1-SNAPSHOT.json">pobierz</a></td>
+	  </tr>
+	  <tr>
+		<td>Zero Update</td>
+		<td>0.0.0</td>
+		<td><a href="%assets_url%/downloads/minecraft/minecraftplus-0.0.0.json">pobierz</a></td>
+	  </tr>
+	</tbody>
+</table>
+
+Jeśli napotkasz błąd w MinecraftPlus, masz pomysł na ulepszenie lub dodanie nowej funkcjonalności zgłoś to pod <a href="https://bitbucket.org/minecraftplus/minecraftplus/issues" target="_blank">tym linkiem.</a>
 
 # Instalacja klienta MC+
 
@@ -27,3 +46,34 @@ Tak przygotowany folder z zawartym w nim plikiem konfiguracyjnym, należy przeni
 
 Aby uruchomić grę w wersji MinecraftPlus należy w launcherze gry dodać nową wersję. W tym celu należy skonfigurować nową instalację, która wykorzystywać będzie pobraną konfigurację wersji gry.
 Należy zwrócić uwagę na rodzaj pobranej konfiguracji - w przypadku gdy nazwa zawiera słowo `SNAPSHOT` jest to wydanie przejściowe i w launcherze należy odblokować używanie wersji przejściowych.
+
+# Uruchamianie Spigot+
+
+Uruchomienie serwera SpigotPlus jest analogiczne jak w przypadku standardowego serwera Spigot.
+
+Aby uruchomić serwer SpigotPlus musisz pobrać gotowy silnik z poniższej listy.  
+W przypadku problemu z pobieraniem, kliknij na link PPM i wybierz "Zapisz link jako...".
+
+<table style="table-layout: fixed; width: 100%">
+	<colgroup><col style="width: auto"><col style="width: auto"><col style="width: 35%"><col style="width: 15%"></colgroup>
+	<thead>
+		<tr><th colspan="2">Kompatybilność</th>	<th rowspan="2">Wersja</th>	<th rowspan="2">Link</th></tr>
+		<tr><th>Wydanie</th><th>Wersja MC+</th></tr>
+	</thead>
+	<tbody>
+	  <tr>
+		<td>Cannon Update</td>
+		<td>???</td>
+		<td>???</td>
+		<td><a href="#???">???</a></td>
+	  </tr>
+	  <tr>
+		<td>Zero Update</td>
+		<td>0.0.0</td>
+		<td>0.0.0</td>
+		<td><a href="%assets_url%/downloads/spigotplus/spigotplus-0.0.0.jar">pobierz</a></td>
+	  </tr>
+	</tbody>
+</table>
+
+Jeśli napotkasz błąd w SpigotPlus, masz pomysł na ulepszenie lub dodanie nowej funkcjonalności zgłoś to pod <a href="https://bitbucket.org/minecraftplus/spigotplus/issues" target="_blank">tym linkiem.</a>
