@@ -55,21 +55,23 @@ Aby uruchomić serwer SpigotPlus musisz pobrać gotowy silnik z poniższej listy
 W przypadku problemu z pobieraniem, kliknij na link PPM i wybierz "Zapisz link jako...".
 
 <table style="table-layout: fixed; width: 100%">
-	<colgroup><col style="width: auto"><col style="width: auto"><col style="width: 35%"><col style="width: 15%"></colgroup>
+	<colgroup><col style="width: auto"><col style="width: 75pt"><col style="width: 75pt"><col style="width: 25%"><col style="width: 15%"></colgroup>
 	<thead>
-		<tr><th colspan="2">Kompatybilność</th>	<th rowspan="2">Wersja</th>	<th rowspan="2">Link</th></tr>
-		<tr><th>Wydanie</th><th>Wersja MC+</th></tr>
+		<tr><th colspan="3">Kompatybilność</th>	<th rowspan="2">Wersja</th>	<th rowspan="2">Link</th></tr>
+		<tr><th>Wydanie</th><th>MC+</th><th>Pluginy</th></tr>
 	</thead>
 	<tbody>
 	  <tr>
 		<td>Cannon Update</td>
 		<td>???</td>
+		<td>1.15.2</td>
 		<td>???</td>
 		<td><a href="#???">???</a></td>
 	  </tr>
 	  <tr>
 		<td>Zero Update</td>
 		<td>0.0.0</td>
+		<td>1.15.2</td>
 		<td>0.0.0</td>
 		<td><a href="%assets_url%/downloads/spigotplus/spigotplus-0.0.0.jar">pobierz</a></td>
 	  </tr>
