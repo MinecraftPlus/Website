@@ -7,6 +7,17 @@ Robots: noindex,nofollow
 Template: index
 ---
 
+<style>
+table {
+	table-layout: fixed;
+	width: 100%;
+	font-size: 10pt;
+}
+th, td {
+	vertical-align: middle;
+}
+</style>
+
 Każda wersja MinecraftPlus działa tak samo jak oryginalny Minecraft. Do uruchomienia gry potrzebny jest launcher Minecraft (dowolny, obsługujący oryginalne pliki konfiguracyjne `.json`).
 
 # Pobieranie klienta MC+
@@ -14,13 +25,13 @@ Każda wersja MinecraftPlus działa tak samo jak oryginalny Minecraft. Do urucho
 Aby uruchomić klienta gry w wydaniu MiecraftPlus musisz pobrać odpowiednią konfigurację wersji z poniższej listy, a następnie ją zainstalować.  
 W przypadku problemu z pobieraniem, kliknij na link PPM i wybierz "Zapisz link jako...".
 
-<table style="table-layout: fixed; width: 100%">
-	<colgroup><col style="width: 35%"><col style="width: 35%"><col style="width: auto"></colgroup>
-	<thead><tr><th>Nazwa wydania</th><th>Wersja</th><th>Link</th></tr></thead>
+<table>
+	<colgroup><col style="width: 35%"><col style="width: auto"><col style="width: 100pt"><col style="width: 70pt"></colgroup>
+	<thead><tr><th>Nazwa wydania</th><th>Wersja</th><th>Bazowa wersja</th><th>Link</th></tr></thead>
 	<tbody>
 	  <tr>
 		<td rowspan="2">Cannon Update</td>
-		<td>0.0.1</td>
+		<td>0.0.1</td><td rowspan="3">1.15.2</td>
 		<td><a download href="%assets_url%/downloads/minecraft/minecraftplus-0.0.1.json">pobierz</a></td>
 	  </tr>
 	  <tr>
@@ -32,6 +43,7 @@ W przypadku problemu z pobieraniem, kliknij na link PPM i wybierz "Zapisz link j
 		<td>0.0.0</td>
 		<td><a download href="%assets_url%/downloads/minecraft/minecraftplus-0.0.0.json">pobierz</a></td>
 	  </tr>
+	  <tr><td colspan="4"></td></tr>
 	</tbody>
 </table>
 
@@ -54,27 +66,24 @@ Uruchomienie serwera SpigotPlus jest analogiczne jak w przypadku standardowego s
 Aby uruchomić serwer SpigotPlus musisz pobrać gotowy silnik z poniższej listy.  
 W przypadku problemu z pobieraniem, kliknij na link PPM i wybierz "Zapisz link jako...".
 
-<table style="table-layout: fixed; width: 100%">
-	<colgroup><col style="width: auto"><col style="width: 75pt"><col style="width: 75pt"><col style="width: 25%"><col style="width: 15%"></colgroup>
+<table>
+	<colgroup><col style="width: auto"><col style="width: 100pt"><col style="width: 60pt"><col style="width: auto"><col style="width: auto"><col style="width: 70pt"></colgroup>
 	<thead>
-		<tr><th colspan="3">Kompatybilność</th>	<th rowspan="2">Wersja</th>	<th rowspan="2">Link</th></tr>
-		<tr><th>Wydanie</th><th>MC+</th><th>Pluginy</th></tr>
+		<tr><th rowspan="2">Wersja</th>	<th colspan="4">Kompatybilność</th>	<th rowspan="2">Link</th></tr>
+		<tr><th>Wydanie</th><th>MC+</th><th>API</th><th>Pluginy</th></tr>
 	</thead>
 	<tbody>
 	  <tr>
-		<td>Cannon Update</td>
-		<td>???</td>
-		<td>1.15.2</td>
-		<td>???</td>
-		<td><a href="#???">???</a></td>
+		<td>0.0.1-SNAPSHOT</td>
+		<td>Cannon Update</td>	<td>0.0.1</td>	<td>0.0.2-SNAPSHOT</td><td rowspan="2" colspan="1">1.15.2</td>
+		<td><a download href="%assets_url%/downloads/spigotplus/spigotplus-0.0.1-SNAPSHOT.jar">pobierz</a></td>
 	  </tr>
 	  <tr>
-		<td>Zero Update</td>
 		<td>0.0.0</td>
-		<td>1.15.2</td>
-		<td>0.0.0</td>
+		<td>Zero Update</td><td>0.0.0</td><td>0.0.1</td>
 		<td><a download href="%assets_url%/downloads/spigotplus/spigotplus-0.0.0.jar">pobierz</a></td>
 	  </tr>
+	  <tr><td colspan="6"></td></tr>
 	</tbody>
 </table>
 
