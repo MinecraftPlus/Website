@@ -88,3 +88,7 @@ W przypadku problemu z pobieraniem, kliknij na link PPM i wybierz "Zapisz link j
 </table>
 
 Jeśli napotkasz błąd w SpigotPlus, masz pomysł na ulepszenie lub dodanie nowej funkcjonalności zgłoś to pod <a href="https://bitbucket.org/minecraftplus/spigotplus/issues" target="_blank">tym linkiem.</a>
+
+# Spigot+ API
+
+API pozwalające na integrację pluginów z nowościami wniesionymi przez aktualizacje zostanie udostępnione w najbliższym czasie, gdy repozytorium projektu zostanie przeniesione do publicznego dostępu.
