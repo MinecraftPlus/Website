@@ -21,16 +21,16 @@ W przypadku problemu z pobieraniem, kliknij na link PPM i wybierz "Zapisz link j
 	  <tr>
 		<td rowspan="2">Cannon Update</td>
 		<td>0.0.1</td>
-		<td><a href="%assets_url%/downloads/minecraft/minecraftplus-0.0.1.json">pobierz</a></td>
+		<td><a download href="%assets_url%/downloads/minecraft/minecraftplus-0.0.1.json">pobierz</a></td>
 	  </tr>
 	  <tr>
 		<td>0.0.1-SNAPSHOT</td>
-		<td><a href="%assets_url%/downloads/minecraft/minecraftplus-0.0.1-SNAPSHOT.json">pobierz</a></td>
+		<td><a download href="%assets_url%/downloads/minecraft/minecraftplus-0.0.1-SNAPSHOT.json">pobierz</a></td>
 	  </tr>
 	  <tr>
 		<td>Zero Update</td>
 		<td>0.0.0</td>
-		<td><a href="%assets_url%/downloads/minecraft/minecraftplus-0.0.0.json">pobierz</a></td>
+		<td><a download href="%assets_url%/downloads/minecraft/minecraftplus-0.0.0.json">pobierz</a></td>
 	  </tr>
 	</tbody>
 </table>
@@ -73,7 +73,7 @@ W przypadku problemu z pobieraniem, kliknij na link PPM i wybierz "Zapisz link j
 		<td>0.0.0</td>
 		<td>1.15.2</td>
 		<td>0.0.0</td>
-		<td><a href="%assets_url%/downloads/spigotplus/spigotplus-0.0.0.jar">pobierz</a></td>
+		<td><a download href="%assets_url%/downloads/spigotplus/spigotplus-0.0.0.jar">pobierz</a></td>
 	  </tr>
 	</tbody>
 </table>
