@@ -37,13 +37,13 @@ Właśnie po to powstał ten projekt, by skroić najlepsze zmiany pod konkretne 
 
 # Na jakim etapie znajduje się projekt?
 
-Aktualnie projekt znajduje się w **fazie ukończenia wydania pierwszej aktualizacji**.
+Aktualnie projekt znajduje się w **fazie testowania pierwszej aktualizacji**.
 
 Pierwsze wykonane kroki przed udostępnieniem projektu publicznie, polegały na skompletowaniu kodu źródłowego wszystkich elementów składowych i połączenie ich w kompletny system.
 Pozwoliło to na zbudowanie pierwszego działającego wydania, pozbawionego jakichkolwiek zmian względem oryginalnej wersji gry, opartego na posiadanym kodzie źródłowym. Ułatwiło to testowanie poprawności działania „gołego” MC+, ponieważ zachowywał się on dokładnie tak samo, jak oryginał. Dotychczasowe testy wyłapały kilka błędów, które zostały rozwiązane.  
-Następnie zintegrowano zmiany pochodzące z CraftBukkit z podstawową wersją MC+. Pozwoliło to uzyskać działające wydanie, bez żadnych zmian względem oryginalnej wersji gry, z możliwością uruchamiania pluginów opartych o API Bukkit. Seria podstawowych testów pozwoliła kilka z nich wyłapać i rozwiązać.
+Następnie zintegrowano zmiany pochodzące z projektu Spigot z podstawową wersją MC+. Pozwoliło to uzyskać działające wydanie, bez żadnych zmian względem oryginalnej wersji gry, z możliwością uruchamiania pluginów opartych o API Spigot. Seria podstawowych testów pozwoliła kilka z nich wyłapać i rozwiązać.
 
-W celu zaprezentowania nieograniczonych możliwości projektu oraz zebrania feedbacku od społeczności i zbadania zainteresowania, w pierwszej kolejności zdecydowano o udostępnieniu pokazowej modyfikacji [Cannon Update](?updates/released/cannon-update) dodającą do gry działa i kule armatnie. Modyfikacja ma być rozwiązaniem na nieestetyczną realizację „dział” za pomocą TNT.
+W celu zaprezentowania nieograniczonych możliwości projektu oraz zebrania feedbacku od społeczności i zbadania zainteresowania, w pierwszej kolejności udostępnieniono pokazową modyfikację [Cannon Update](?updates/released/cannon-update) dodającą do gry działa i kule armatnie. Modyfikacja ma być rozwiązaniem na nieestetyczną realizację „dział” za pomocą TNT.
 
 # Na jakiej wersji bazuje MC+?
 
@@ -55,13 +55,12 @@ Przed rozpoczęciem prac nad dodawaniem zmian, cały projekt otrzymał odpowiedn
 W skład projektu wchodzi:
 - MinecraftPlus-Client - aplikacja klienta gry wraz z modyfikacjami
 - MinecraftPlus-Server - aplikacja serwera gry wraz z modyfikacjami
-- CraftBukkitPlus-Server* - aplikacja serwera gry wraz z modyfikacjami i API Bukkit** pozwalającym uruchamiać pluginy
-- BukkitPlus\*** - API Bukkit uzupełnione o modyfikacje z projektu
-- AuthServerLibrary* - biblioteka pozwalająca na autoryzację graczy na serwerze bez pluginów (zamiennik do AuthLib)
+- SpigotPlus-Server - aplikacja serwera gry wraz z modyfikacjami i API Spigot* pozwalającym uruchamiać pluginy
+- SpigotPlus-API - API Spigot uzupełnione o modyfikacje z projektu
+- AuthServerLibrary** - biblioteka pozwalająca na autoryzację graczy na serwerze bez pluginów (zamiennik do AuthLib)
 
-\* aktualnie niedostępne, prace nad integracją zmian z aktualizacji [Cannon Update](?updates/released/cannon-update)  
-\*\* wariacje projektu oparte na tym API jak Spigot lub Paper są przewidywane w przypadku naprawdę dużego zapotrzebowania  
-\*\*\* aktualnie niedostępne z uwagi na prace nad *CraftBukkitPlus*  
+\* integracja z PaperMC jest przewidywana w przypadku większego zapotrzebowania  
+\*\* aktualnie niedostępne
 
 # Do kogo skierowany jest projekt?
 
