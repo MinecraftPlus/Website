@@ -112,14 +112,36 @@ Aby otowrzyć graficzne menu działa należy kliknąć `PPM` na działo z przytr
 
 
 
-## Moździerze - alternatywa dla dział armatnich
+## Moździerz
 
-W finalnej wersji aktualizacji dodane zostaną moździerze z pociskami moździerzowymi, jako alternatywa do dział które mają głównie poziomy tor lotu - te pozwoliłyby na ostrzał wroga ukrytego za fortyfikacjami z powietrza. Zarówno pociski moździerzowe tak jak armatnie będą posiadać dwa warianty warianty - burzące oraz zapalające.
+W drugiej wersji aktualizacji dodane zostały moździerze, będące alternatywą dla dział które mają głównie poziomy tor lotu - moździerz pozwala na ostrzał wroga ukrytego za fortyfikacjami z powietrza.
+
+<div style="padding: 10pt 0;">
+	<img src="%assets_url%/images/cannon-update_mortar-front.png" style="width: 49%;">
+	<img src="%assets_url%/images/cannon-update_mortar-back.png" style="width: 49%;">
+</div>
+
+### Crafting moździerza
+
+<img src="%assets_url%/images/cannon-update_mortar-crafting.png" style="float: right; margin-left: 20pt;">
+Receptura pozwalająca craftować moździerz jest recepturą kształtową. Różni się od działa tylko tym, że wymaga jednego bloku żelaza mniej.
+
+</br>
+
+### Różnica między działem a moździerzem
+
+Moździerze z uwagi na krótszą lufę posiadają mniejszą niż działa zdolność miotania pociskami. Ich konstrukcja ogranicza również kąt strzału. Moździerz można także załadować stojąc za nim (od strony zapalnika) jeśli tylko odpowiednio odchyli się lufę.  
+Poza tymi różnicami, działanie moździerza jest analogiczne do działania działa.
 
 
 ## Zalety modyfikacji
  - zwiększenie realizmu oblężeń
  - kontrola toru lotu przez zmianę kąta lufy lub ilość prochu
- - kontrola uzyskanych efektu ostrzału przez użycie pocisków burzących lub zapalających
+ - kontrola uzyskanych efektów ostrzału przez użycie pocisków burzących lub zapalających
  - możliwość stosowania różnych strategii ostrzału przez zmianę siły strzału lub rodzaj pocisku
  - mobilność maszyn oblężniczych
+
+
+<div style="padding: 10pt 0;">
+	<img src="%assets_url%/images/cannon-update_presentation.png">
+</div>
