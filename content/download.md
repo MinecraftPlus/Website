@@ -27,11 +27,15 @@ W przypadku problemu z pobieraniem, kliknij na link PPM i wybierz "Zapisz link j
 
 <table>
 	<colgroup><col style="width: 35%"><col style="width: auto"><col style="width: 100pt"><col style="width: 70pt"></colgroup>
-	<thead><tr><th>Nazwa wydania</th><th>Wersja</th><th>Bazowa wersja</th><th>Link</th></tr></thead>
+	<thead><tr><th>Nazwa wydania</th><th>Wersja</th><th>Bazowa wersja*</th><th>Link</th></tr></thead>
 	<tbody>
 	  <tr>
-		<td rowspan="2">Cannon Update</td>
-		<td>0.0.1</td><td rowspan="3">1.15.2</td>
+		<td rowspan="3">Cannon Update</td>
+		<td>0.0.2</td><td rowspan="4">1.15.2</td>
+		<td><a download href="%assets_url%/downloads/minecraft/minecraftplus-0.0.2.json">pobierz</a></td>
+	  </tr>
+	  <tr>
+		<td>0.0.1</td>
 		<td><a download href="%assets_url%/downloads/minecraft/minecraftplus-0.0.1.json">pobierz</a></td>
 	  </tr>
 	  <tr>
@@ -43,7 +47,7 @@ W przypadku problemu z pobieraniem, kliknij na link PPM i wybierz "Zapisz link j
 		<td>0.0.0</td>
 		<td><a download href="%assets_url%/downloads/minecraft/minecraftplus-0.0.0.json">pobierz</a></td>
 	  </tr>
-	  <tr><td colspan="4"></td></tr>
+	  <tr><td colspan="4">* wersja oryginalnej wersji gry której zawartość jest obecna w danej wersji MC+</td></tr>
 	</tbody>
 </table>
 
