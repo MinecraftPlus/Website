@@ -38,7 +38,7 @@ W tej aktualizacji do gry dodane zostały działa armatnie wraz z kulami armatni
 <img src="%assets_url%/images/cannon-update_cannon-crafting.png" style="float: right; margin-left: 20pt;">
 Receptura pozwalająca craftować działo jest recepturą kształtową.
 
-Aktualnie dostępny jest tylko wariant z dębowymi deskami.
+Dostępne są receptury z wszystkimi wariantami desek.
 </br>
 </br>
 </br>
@@ -126,6 +126,7 @@ W drugiej wersji aktualizacji dodane zostały moździerze, będące alternatywą
 <img src="%assets_url%/images/cannon-update_mortar-crafting.png" style="float: right; margin-left: 20pt;">
 Receptura pozwalająca craftować moździerz jest recepturą kształtową. Różni się od działa tylko tym, że wymaga jednego bloku żelaza mniej.
 
+Dostępne są receptury z wszystkimi wariantami desek.
 </br>
 
 ### Różnica między działem a moździerzem
