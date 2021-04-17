@@ -74,7 +74,7 @@ W przypadku problemu z pobieraniem, kliknij na link PPM i wybierz "Zapisz link j
 	<colgroup><col style="width: auto"><col style="width: 100pt"><col style="width: 60pt"><col style="width: auto"><col style="width: auto"><col style="width: 70pt"></colgroup>
 	<thead>
 		<tr><th rowspan="2">Wersja</th>	<th colspan="4">Kompatybilność</th>	<th rowspan="2">Link</th></tr>
-		<tr><th>Wydanie</th><th>MC+</th><th>API</th><th>Pluginy</th></tr>
+		<tr><th>Wydanie</th><th>MC+</th><th>API</th><th>Pluginy*</th></tr>
 	</thead>
 	<tbody>
 	  <tr>
@@ -92,7 +92,7 @@ W przypadku problemu z pobieraniem, kliknij na link PPM i wybierz "Zapisz link j
 		<td>Zero Update</td><td>0.0.0</td><td>0.0.1</td>
 		<td><a download href="%assets_url%/downloads/spigotplus/spigotplus-0.0.0.jar">pobierz</a></td>
 	  </tr>
-	  <tr><td colspan="6"></td></tr>
+	  <tr><td colspan="6">* zgodność z pluginami jest zapewniana na poziomie API; pluginy lub ich funkcjonalności wykraczające poza zakres Spigot+API mogą być niekompatybilne z silnikiem Spigot+ ze względu na jego odmienną strukturę względem oryginalnego silnika Spigot.</td></tr>
 	</tbody>
 </table>
 
