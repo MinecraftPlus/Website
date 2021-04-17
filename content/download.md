@@ -78,8 +78,13 @@ W przypadku problemu z pobieraniem, kliknij na link PPM i wybierz "Zapisz link j
 	</thead>
 	<tbody>
 	  <tr>
+		<td>0.0.2</td>
+		<td rowspan="2" >Cannon Update</td>	<td>0.0.2</td>	<td>0.0.2</td><td rowspan="3" colspan="1">Spigot 1.15.2</td>
+		<td><a download href="%assets_url%/downloads/spigotplus/spigotplus-0.0.2.jar">pobierz</a></td>
+	  </tr>
+	  <tr>
 		<td>0.0.1-SNAPSHOT</td>
-		<td>Cannon Update</td>	<td>0.0.1</td>	<td>0.0.2-SNAPSHOT</td><td rowspan="2" colspan="1">1.15.2</td>
+		<td>0.0.1</td>	<td>0.0.2-SNAPSHOT</td>
 		<td><a download href="%assets_url%/downloads/spigotplus/spigotplus-0.0.1-SNAPSHOT.jar">pobierz</a></td>
 	  </tr>
 	  <tr>
