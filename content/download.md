@@ -100,4 +100,5 @@ Jeśli napotkasz błąd w SpigotPlus, masz pomysł na ulepszenie lub dodanie now
 
 # Spigot+ API
 
-API pozwalające na integrację pluginów z nowościami wniesionymi przez aktualizacje zostanie udostępnione w najbliższym czasie, gdy repozytorium projektu zostanie przeniesione do publicznego dostępu.
+API pozwalające na integrację pluginów z nowościami wniesionymi przez aktualizacje zostanie udostępnione w najbliższym czasie, gdy repozytorium projektu zostanie przeniesione do publicznego dostępu.  
+Jeśli potrzebujesz dostępu do API już teraz, skontaktuj się z nami na naszym discordzie.
