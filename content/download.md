@@ -10,7 +10,6 @@ Order: 3
 
 <style>
 table {
-	table-layout: fixed;
 	width: 100%;
 	font-size: 10pt;
 }
@@ -27,7 +26,12 @@ Aby uruchomić klienta gry w wydaniu MiecraftPlus musisz pobrać odpowiednią ko
 W przypadku problemu z pobieraniem, kliknij na link PPM i wybierz "Zapisz link jako...".
 
 <table>
-	<colgroup><col style="width: 35%"><col style="width: auto"><col style="width: 100pt"><col style="width: 70pt"></colgroup>
+	<colgroup>
+		<col style="width: 35%">
+		<col style="width: auto">
+		<col style="width: 100pt">
+		<col style="width: 70pt">
+	</colgroup>
 	<thead><tr><th>Nazwa wydania</th><th>Wersja</th><th>Bazowa wersja*</th><th>Link</th></tr></thead>
 	<tbody>
 	  <tr>
@@ -72,7 +76,14 @@ Aby uruchomić serwer SpigotPlus musisz pobrać gotowy silnik z poniższej listy
 W przypadku problemu z pobieraniem, kliknij na link PPM i wybierz "Zapisz link jako...".
 
 <table>
-	<colgroup><col style="width: auto"><col style="width: 100pt"><col style="width: 60pt"><col style="width: auto"><col style="width: auto"><col style="width: 70pt"></colgroup>
+	<colgroup>
+		<col style="width: auto">
+		<col style="width: 100pt">
+		<col style="width: 60pt">
+		<col style="width: auto">
+		<col style="width: auto">
+		<col style="width: 70pt">
+	</colgroup>
 	<thead>
 		<tr><th rowspan="2">Wersja</th>	<th colspan="4">Kompatybilność</th>	<th rowspan="2">Link</th></tr>
 		<tr><th>Wydanie</th><th>MC+</th><th>API</th><th>Pluginy*</th></tr>
