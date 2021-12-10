@@ -6,6 +6,7 @@ Author: Wituch
 Template: index
 
 Date: 2020-08-10
+Order: 0
 ---
 
 # Czym jest Minecraft Plus?
