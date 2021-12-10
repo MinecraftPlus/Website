@@ -1,0 +1,22 @@
+{#
+/**
+ * Implementation for a progress bar.
+ *
+ * Available variables:
+ * - attributes: An array of HTML attributes intended to be added to the
+     progress bar container of this template.
+ *   - id: A valid HTML ID and guaranteed to be unique.
+ * - label: The label of the working task.
+ * - percent: The percentage of the progress.
+ * - message: A string containing information to be displayed.
+ *
+ */
+#}
+
+{% if percent < 0 %}{% set percent = 0 %}{% endif %}{% if percent > 100 %}{% set percent = 100 %}{% endif %}
+<div class="progressbar-wrapper rounded">
+    <link rel="stylesheet" href="{{ theme_url }}/css/progressbar.css" type="text/css" />
+    <div class="progressbar rounded {% if not percent > 0 %} zero {% endif %}" style="width: {{ percent }}%">
+        <span class="percentage">{{ percent }}%</span>
+    </div>
+</div>

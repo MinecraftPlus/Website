@@ -36,21 +36,6 @@ Moim subiektywnym zdaniem (możliwe, że się z tym zdaniem zgadzasz) głównym 
 
 Właśnie po to powstał ten projekt, by skroić najlepsze zmiany pod konkretne potrzeby, bez zbędnych funkcjonalności, które tylko utrudniają rozgrywkę, szczególnie nowicjuszom.
 
-# Na jakim etapie znajduje się projekt?
-
-Aktualnie projekt znajduje się w **fazie testowania pierwszej aktualizacji**.
-
-Pierwsze wykonane kroki przed udostępnieniem projektu publicznie, polegały na skompletowaniu kodu źródłowego wszystkich elementów składowych i połączenie ich w kompletny system.
-Pozwoliło to na zbudowanie pierwszego działającego wydania, pozbawionego jakichkolwiek zmian względem oryginalnej wersji gry, opartego na posiadanym kodzie źródłowym. Ułatwiło to testowanie poprawności działania „gołego” MC+, ponieważ zachowywał się on dokładnie tak samo, jak oryginał. Dotychczasowe testy wyłapały kilka błędów, które zostały rozwiązane.  
-Następnie zintegrowano zmiany pochodzące z projektu Spigot z podstawową wersją MC+. Pozwoliło to uzyskać działające wydanie, bez żadnych zmian względem oryginalnej wersji gry, z możliwością uruchamiania pluginów opartych o API Spigot. Seria podstawowych testów pozwoliła kilka z nich wyłapać i rozwiązać.
-
-W celu zaprezentowania nieograniczonych możliwości projektu oraz zebrania feedbacku od społeczności i zbadania zainteresowania, w pierwszej kolejności udostępnieniono pokazową modyfikację [Cannon Update](?updates/released/cannon-update) dodającą do gry działa i kule armatnie. Modyfikacja ma być rozwiązaniem na nieestetyczną realizację „dział” za pomocą TNT.
-
-# Na jakiej wersji bazuje MC+?
-
-Projekt bazuje aktualnie na wersji 1.15.2.
-Przed rozpoczęciem prac nad dodawaniem zmian, cały projekt otrzymał odpowiednią strukturę pozwalającą na minimalizację czasu potrzebnego na zintegrowanie zmian z przyszłych, nowszych wersji Minecrafta.
-
 # Jakie oprogramowanie wchodzi w skład projektu?
 
 W skład projektu wchodzi:
