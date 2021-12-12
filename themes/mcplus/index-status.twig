@@ -38,15 +38,15 @@
 				{% for page in pages("steps")|sort_by("time")|reverse if not page.hidden %}
 					<div class="post">
 						<div style="display: flow-root">
-							<h3  style="float:left;" >{{ page.title }}</h3>
-							<p style="float:right;">{{ page.date }}</p>
+							<h3 style="float:left;">{{ page.title }}</h3>
+							<p class="date" style="float:right;">{{ page.date|date('j F Y') }}</p>
 						</div>
-						<div style="">
+						<div>
 							<p class="desc">{{ page.description }}</p>
 							{% if not page.meta.Progress is empty %}
 								{% include 'progressbar.twig' with {'percent': page.meta.Progress} %}
 							{% endif %}
-							<p class="date">{{ page.id|content }}</p>
+							<div style="margin-top: 0.75em;">{{ page.id|content }}</div>
 						</div>
 						<hr>
 					</div>
@@ -64,11 +64,13 @@
 					<div class="post">
 						<div style="display: flow-root">
 							<h3 style="float:left;">{{ page.title }}</h3>
-							<p style="float:right;">{{ page.date }}</p>
+							<p class="date" style="float:right;">
+								{{ page.date|date('j F Y') }}{% if not page.meta.EndDate is empty %}&nbsp~&nbsp{{ page.meta.EndDate|date("j F Y") }}{% endif %}
+							</p>
 						</div>
-						<div style="">
+						<div>
 							<p class="desc">{{ page.description }}</p>
-							<p class="date">{{ page.id|content }}</p>
+							<div style="margin-top: 0.75em;">{{ page.id|content }}</div>
 						</div>
 						<hr>
 					</div>
