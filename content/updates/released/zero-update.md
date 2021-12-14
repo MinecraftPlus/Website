@@ -4,7 +4,7 @@ Description: Pierwsza wersja MC+ oparta na kodzie źródłowym projektu
 Author: Wituch
 Date:
 
-Template: page-update
+Template: tmpl/updates/update-page
 ---
 
 # Zero Update - pierwsze testy

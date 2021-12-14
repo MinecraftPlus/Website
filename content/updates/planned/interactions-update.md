@@ -4,7 +4,7 @@ Description: Aktualizacja zmieniajca sposób interakcji gracza z otoczeniem
 Author: Wituch
 Date:
 
-Template: page-update
+Template: tmpl/updates/update-page
 
 Dependencies:
     - id: Cannon Update

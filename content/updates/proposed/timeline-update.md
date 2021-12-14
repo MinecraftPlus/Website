@@ -4,7 +4,7 @@ Description: Aktualizacja dodająca do gry upływ czasu, którym mierzony jest w
 Author: Wituch
 Date:
 
-Template: page-update
+Template: tmpl/updates/update-page
 
 Dependencies:
     - id: Knowledge Update

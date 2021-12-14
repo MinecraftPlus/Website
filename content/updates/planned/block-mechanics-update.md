@@ -4,7 +4,7 @@ Description: Aktualizacja zmieniająca sposób niszczenia bloków
 Author: Wituch
 Date:
 
-Template: page-update
+Template: tmpl/updates/update-page
 
 Dependencies:
     - id: Character Update

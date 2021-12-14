@@ -4,7 +4,7 @@ Description: Aktualizacja dodająca do gry mechanizm wagi przedmiotów
 Author: Wituch
 Date:
 
-Template: page-update
+Template: tmpl/updates/update-page
 
 -Dependencies:
     - id: Dep Update

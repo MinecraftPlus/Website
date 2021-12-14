@@ -27,15 +27,15 @@
 </head>
 <body{% if config.theme_config.widescreen %} class="widescreen"{% endif %}>
 
-    {% include 'header.twig' %}
+    {% include 'tmpl/header.twig' %}
 
     <div id="main" role="main">
         <div class="container">
             {{ content }}
 
 			<h1>Aktualnie realizowane zadania</h1>
-			{% if not pages("steps") is empty %}
-				{% for page in pages("steps")|sort_by("time")|reverse if not page.hidden %}
+			{% if not pages("status/steps") is empty %}
+				{% for page in pages("status/steps")|sort_by("time")|reverse if not page.hidden %}
 					<div class="post">
 						<div style="display: flow-root">
 							<h3 style="float:left;">{{ page.title }}</h3>
@@ -44,7 +44,7 @@
 						<div>
 							<p class="desc">{{ page.description }}</p>
 							{% if not page.meta.Progress is empty %}
-								{% include 'progressbar.twig' with {'percent': page.meta.Progress} %}
+								{% include 'tmpl/progressbar.twig' with {'percent': page.meta.Progress} %}
 							{% endif %}
 							<div style="margin-top: 0.75em;">{{ page.id|content }}</div>
 						</div>
@@ -59,8 +59,8 @@
 
 			<br/>
 			<h1>Wcześniejsze działania</h1>
-			{% if not pages("steps/done") is empty %}
-				{% for page in pages("steps/done")|sort_by("time")|reverse if not page.hidden %}
+			{% if not pages("status/steps/done") is empty %}
+				{% for page in pages("status/steps/done")|sort_by("time")|reverse if not page.hidden %}
 					<div class="post">
 						<div style="display: flow-root">
 							<h3 style="float:left;">{{ page.title }}</h3>
@@ -83,7 +83,7 @@
         </div>
     </div>
 
-	{% include 'footer.twig' %}
+	{% include 'tmpl/footer.twig' %}
 
     <script src="{{ theme_url }}/js/modernizr-3.3.1-custom.min.js" type="text/javascript"></script>
     <script src="{{ theme_url }}/js/utils.js" type="text/javascript"></script>

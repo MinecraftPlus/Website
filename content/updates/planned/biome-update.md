@@ -4,7 +4,7 @@ Description: Aktualizacja regulująca występowanie surowców, roślin oraz zwie
 Author: Wituch
 Date:
 
-Template: page-update
+Template: tmpl/updates/update-page
 
 Dependencies:
     - id: Dep Update

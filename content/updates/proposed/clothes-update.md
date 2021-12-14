@@ -4,7 +4,7 @@ Description: Aktualizacja dodająca do gry ubrania jako ozdobną część garder
 Author: Wituch
 Date:
 
-Template: page-update
+Template: tmpl/updates/update-page
 
 -Dependencies:
     - id: Dep Update

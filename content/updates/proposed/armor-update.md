@@ -4,7 +4,7 @@ Description: Aktualizacja zmieniąjąca system pancerza i dodająca do gry nowe 
 Author: Wituch
 Date:
 
-Template: page-update
+Template: tmpl/updates/update-page
 
 -Dependencies:
     - id: Dep Update

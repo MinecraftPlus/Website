@@ -4,7 +4,7 @@ Description: Aktualizacja dodająca do gry system rozwoju postaci w oparciu drze
 Author: Wituch
 Date:
 
-Template: page-update
+Template: tmpl/updates/update-page
 
 Dependencies:
     - id: Character Update

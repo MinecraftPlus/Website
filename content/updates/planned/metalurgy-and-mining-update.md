@@ -4,7 +4,7 @@ Description: Aktualizacja rozwijająca górnictwo w grze przez dodanie nowych ru
 Author: Wituch
 Date:
 
-Template: page-update
+Template: tmpl/updates/update-page
 
 -Dependencies:
     - id: Dep Update

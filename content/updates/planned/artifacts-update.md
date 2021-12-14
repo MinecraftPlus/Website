@@ -4,7 +4,7 @@ Description: Aktualizacja dodająca do gry system ulepszania przedmiotów za pom
 Author: Wituch
 Date:
 
-Template: page-update
+Template: tmpl/updates/update-page
 
 -Dependencies:
     - id: Dep Update

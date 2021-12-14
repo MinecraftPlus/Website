@@ -4,7 +4,7 @@ Description: Aktualizacja dodająca do gry nowe AI dla zwierząt, potworów i NP
 Author: Wituch
 Date:
 
-Template: page-update
+Template: tmpl/updates/update-page
 
 -Dependencies:
     - id: Dep Update

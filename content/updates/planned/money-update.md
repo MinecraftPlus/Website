@@ -4,7 +4,7 @@ Description: Aktualizacja dodająca do gry monety, będące podstawowym środkie
 Author: Wituch
 Date:
 
-Template: page-update
+Template: tmpl/updates/update-page
 
 Dependencies:
     - id: Biome Update

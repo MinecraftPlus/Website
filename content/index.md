@@ -3,7 +3,7 @@ Title: O projekcie
 Description: MinecraftPlus
 Author: Wituch
 
-Template: index
+Template: tmpl/index
 
 Date: 2020-08-10
 Order: 0

@@ -4,7 +4,7 @@ Description: Aktualizacja dodająca do gry działa i kule armatnie, pozwalające
 Author: Wituch
 Date: 2020-10-29
 
-Template: page-update
+Template: tmpl/updates/update-page
 
 Dependencies:
     - id: Block Mechanics Update
