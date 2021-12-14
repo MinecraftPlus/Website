@@ -40,7 +40,8 @@
 				{% for dependency in meta.Dependencies %}
 					<!--<li>{{ dependency.id }}&nbsp;{{ dependency.desc }}&nbsp;{{ dependency.type }}</li>-->
 					<ul>
-					{% for page in pages if page.title == dependency.id %}
+					{% set update_pages = pages("updates/proposed")|merge(pages("updates/planned"))|merge(pages("updates/released")) %}
+					{% for page in update_pages if page.title == dependency.id %}
 						<li>
 							{% if dependency.type == "dependent" %}Zależna od&nbsp;{% elseif dependency.type == "extension" %}Uzupełniająca dla&nbsp;{% endif %}<a href="{{ page.url }}">{{ page.title }}</a> -&nbsp;{{ dependency.desc }}
 						</li>
