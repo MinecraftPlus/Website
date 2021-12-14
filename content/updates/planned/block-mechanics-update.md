@@ -34,5 +34,5 @@ W przypadku używania narzędzi do wydobywania bloków (co dotyczy wszystkich bl
  - większy realizm wydobycia (każdy ruch narzędzia wykonuje konkretną pracę, bez bezsensowanego machania)
  - możliwość łatwego skalowania zdolności wydobywania poprzez statystyki postaci np. siłę
  - możliwość współpracy kilku graczy przy wydobywaniu tego samego bloku
- - synergia z modyfikacją [Cannon-Update](?updates/cannon-update) pozwalającą tworzyć mocne fortyfikacje (wymagające kilku trafień do przebicia) , ale nie niezniszczalne!
- - możliwość zaimplementowania erozji z biegiem czasu nadniszczonych powyżej określonego limitu bloków np. cegieł w fortyfikacjach jak i "samogojenie" np. bloków piasku 
+ - synergia z modyfikacją dodającą działa armatnie, poprzez możliwość budowania mocnych fortyfikacji (wymagających kilku trafień do przebicia)
+ - możliwość zaimplementowania erozji z biegiem czasu, bloków uszkodzonych powyżej określonego limitu bloków np. cegieł w fortyfikacjach jak i "samogojenie" np. bloków piasku

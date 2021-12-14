@@ -77,7 +77,7 @@ Projekt będzie oferował natywne wsparcie dla interakcji z NPC poprzez odpowied
 
 # Jak używać MC+?
 
-Jeśli chcesz uruchomić klienta lub serwer w wydaniu MiecraftPlus, musisz pobrać odpowiedni instalator z sekcji [Pobieranie](?download).
+Jeśli chcesz uruchomić klienta lub serwer w wydaniu MiecraftPlus, musisz pobrać odpowiedni instalator z sekcji [Pobieranie](download).
 Znajdziesz tam informacje o tym, skąd i jak pobrać odpowiednią konfigurację wersji pozwalającą uruchomić klienta lub serwer MC+.
 
 # Plany na przyszłość:
@@ -90,7 +90,7 @@ Kolejnymi krokami zaplanowanymi dla projektu jest:
 
 Lista planowanych modyfikacji jest długa (a zawiera tylko najważniejsze pomysły) niełatwo jest określić konkretny przebieg prac. Dlatego jak wspomniano wcześniej:
 
-> W celu zebrania feedbacku od społeczności i zbadania zainteresowania w pierwszej kolejności udostępniłem pokazową modyfikację [Cannon Update](?updates/released/cannon-update) dodającą do gry działa i kule armatnie. Modyfikacja ma być rozwiązaniem na nieestetyczną realizację „dział” za pomocą TNT.
+> W celu zebrania feedbacku od społeczności i zbadania zainteresowania w pierwszej kolejności udostępniłem pokazową modyfikację [Cannon Update](updates/released/cannon-update) dodającą do gry działa i kule armatnie. Modyfikacja ma być rozwiązaniem na nieestetyczną realizację „dział” za pomocą TNT.
 
 W skrócie przyszłość tego projektu zależy wyłącznie od jego odbioru przez szersze grono graczy i twórców serwerów Minecraft.
 

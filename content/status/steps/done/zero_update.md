@@ -8,4 +8,4 @@ EndDate: 1-6-2020
 Progress: 100
 ---
 
-Zbudowanie pierwszego działającego wydania - [Zero Update](?updates/released/zero-update), pozbawionego jakichkolwiek zmian względem oryginalnej wersji gry i opartego na przygotowanym kodzie źródłowym. Ułatwi to testowanie poprawności działania „gołego” MC+, ponieważ będzie zachowywał się on dokładnie tak samo, jak oryginał.
+Zbudowanie pierwszego działającego wydania, pozbawionego jakichkolwiek zmian względem oryginalnej wersji gry i opartego na przygotowanym kodzie źródłowym. Ułatwi to testowanie poprawności działania „gołego” MC+, ponieważ będzie zachowywał się on dokładnie tak samo, jak oryginał.
