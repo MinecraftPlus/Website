@@ -29,8 +29,8 @@ W tej aktualizacji do gry dodane zostały działa armatnie wraz z kulami armatni
 ## Działo armatnie
 
 <div style="padding: 10pt 0;">
-	<img src="%assets_url%/images/cannon-update_cannon-front.png" style="width: 49%;">
-	<img src="%assets_url%/images/cannon-update_cannon-back.png" style="width: 49%;">
+    <img src="%assets_url%/images/cannon-update_cannon-front.png" style="width: 49%;">
+    <img src="%assets_url%/images/cannon-update_cannon-back.png" style="width: 49%;">
 </div>
 
 ### Crafting działa
@@ -72,10 +72,10 @@ Poruszanie działem jest analogiczne do poruszania się postacią - `lewo/prawo`
 Aby zmienić kąt nachylenia lufy, należy użyć ruchu `przód/tył` z wciśniętym klawiszem `skoku`. Kierunek `przód` powoduje uniesienie lufy w górę, kierunek `tył` opuszczenie w dół.
 
 <center>
-	<video width="80%" controls>
-	  <source src="%assets_url%/videos/cannon-update_cannon-steering.mp4" type="video/mp4">
-		Your browser does not support the video tag.
-	</video>
+    <video width="80%" controls>
+      <source src="%assets_url%/videos/cannon-update_cannon-steering.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
 </center>
 </br>
 
@@ -88,10 +88,10 @@ Aby załadować proch lub kulę do działa, należy stanąć naprzeciw niemu, wy
 Aby oddać strzał, należy stanąć za działem, wycelować w zapalnik i trzymając w ręku pochodnię kliknąć `PPM`.
 
 <center>
-	<video width="80%" controls>
-	  <source src="%assets_url%/videos/cannon-update_cannon-loading-and-shooting.mp4" type="video/mp4">
-		Your browser does not support the video tag.
-	</video>
+    <video width="80%" controls>
+      <source src="%assets_url%/videos/cannon-update_cannon-loading-and-shooting.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
 </center>
 </br>
 
@@ -103,10 +103,10 @@ Menu to pozwala także na rozładowanie działa poprzez wyciągnięcie kuli - za
 Aby otowrzyć graficzne menu działa należy kliknąć `PPM` na działo z przytrzymanym klawiszem `skradania` (domyślnie `lewy Shift`).
 
 <center>
-	<video width="80%" controls>
-	  <source src="%assets_url%/videos/cannon-update_cannon-menu-opening.mp4" type="video/mp4">
-		Your browser does not support the video tag.
-	</video>
+    <video width="80%" controls>
+      <source src="%assets_url%/videos/cannon-update_cannon-menu-opening.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
 </center>
 </br>
 
@@ -117,8 +117,8 @@ Aby otowrzyć graficzne menu działa należy kliknąć `PPM` na działo z przytr
 W drugiej wersji aktualizacji dodane zostały moździerze, będące alternatywą dla dział które mają głównie poziomy tor lotu - moździerz pozwala na ostrzał wroga ukrytego za fortyfikacjami z powietrza.
 
 <div style="padding: 10pt 0;">
-	<img src="%assets_url%/images/cannon-update_mortar-front.png" style="width: 49%;">
-	<img src="%assets_url%/images/cannon-update_mortar-back.png" style="width: 49%;">
+    <img src="%assets_url%/images/cannon-update_mortar-front.png" style="width: 49%;">
+    <img src="%assets_url%/images/cannon-update_mortar-back.png" style="width: 49%;">
 </div>
 
 ### Crafting moździerza
@@ -144,5 +144,5 @@ Poza tymi różnicami, działanie moździerza jest analogiczne do działania dzi
 
 
 <div style="padding: 10pt 0;">
-	<img src="%assets_url%/images/cannon-update_presentation.png">
+    <img src="%assets_url%/images/cannon-update_presentation.png">
 </div>
