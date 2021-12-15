@@ -2,7 +2,7 @@
 Title: Cannon Update
 Description: Aktualizacja dodająca do gry działa i kule armatnie, pozwalające na ostrzał artyleryjski
 Author: Wituch
-Date: 2020-10-29
+Date: 29-10-2020
 
 Template: tmpl/updates/update-page
 

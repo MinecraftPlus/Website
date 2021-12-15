@@ -10,8 +10,8 @@ Dependencies:
     - id: Knowledge Update
       desc: Postać zaczynając od wieku młodzieńczego posiada większe zdolności nauki, przez obniżenie wymaganych punktów doświadczenia do oblokowania umiejętności
       type: dependent
-    - id: Biome Update
-      desc: Każdy blok posiadać będzie określoną wytrzymałość (maksymalne "HP" bloku). Wraz z otrzymywaniem obrażeń i obniżaniem poziomu "HP" na bloku pojawią się postępujące ślady zniszczenia (tak jak w oryginalnym wydaniu, podczas kopania). Gdy poziom "
+    - id: asd
+      desc: asd
       type: extension
 ---
 

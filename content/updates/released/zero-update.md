@@ -2,7 +2,7 @@
 Title: Zero Update
 Description: Pierwsza wersja MC+ oparta na kodzie źródłowym projektu
 Author: Wituch
-Date:
+Date: 12-9-2020
 
 Template: tmpl/updates/update-page
 ---

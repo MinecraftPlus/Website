@@ -24,6 +24,49 @@
 	<script>
 	  window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}gtag('js', new Date());gtag('config', 'G-2T18T0K2B9');
 	</script>
+
+	<style>
+		div.list {
+			margin-bottom: 1.5em;
+		}
+		div.desc {
+			font-size: .8rem;
+			color: #656967;
+		}
+		div.desc.released {
+			font-size: .9rem;
+		}
+
+		.title {
+			float: left;
+			margin: 0;
+		}
+		.date {
+			float: right;
+			margin: 0;
+		}
+
+		@media (min-width: 765px) {
+			div.responsive-list {
+				columns: 2;
+			}
+			div.update {
+				display: inline-block;
+			}
+			div.update.released {
+				display: block;
+			}
+		}
+
+		@media (max-width: 765px) {
+			h3.title {
+				font-size: 1.25rem;
+			}
+			.date {
+				font-size: .85rem;
+			}
+		}
+	</style>
 </head>
 <body{% if config.theme_config.widescreen %} class="widescreen"{% endif %}>
 
@@ -31,54 +74,82 @@
 
     <div id="main" role="main">
         <div class="container">
+
             {{ content }}
 
 			<h1>Aktualizacje wydane</h1>
-			<p><i>Lista aktualizacji, które zostały zaimplementowane do MC+</i></p>
-			{% if not pages("updates/released") is empty %}
-				{% for page in pages("updates/released")|sort_by("time")|reverse if not page.hidden %}
-					<div class="post">
-						<h3><a href="{{ page.url }}">{{ page.title }}</a></h3>{{ page.date }}
-						<p class="date">{{ page.description }}</p>
+			<p>Lista aktualizacji wydanych, zawiera te które zostały już zaimplementowane do MC+ i są dostępne do pobrania. Wyświetlane w kolejności od najnowszej do najstarszej.</p>
+
+			<div id="updates-released" class="list">
+			{% set pages = pages("updates/released") %}
+			{% if not pages is empty %}
+				{% for page in pages|sort_by("time")|reverse if not page.hidden %}
+					<div class="update released">
+						<div style="display: flow-root">
+							<h3 class="title"><a href="{{ page.url }}">{{ page.title }}</a></h3>
+							{% if not page.date is empty %}
+								<p class="date" style="float:right;">{{ page.date|date('j F Y') }}</p>
+							{% endif %}
+						</div>
+						<div class="desc released">
+							<p>{{ page.description }}</p>
+						</div>
+						<hr>
 					</div>
 				{% endfor %}
 			{% else %}
-				<div class="post">
-					<h4><a href="">Brak aktualizacji do wyświetlenia</a></h4>
+				<div>
+					<p>Brak aktualizacji do wyświetlenia</p>
 				</div>
 			{% endif %}
+			</div>
 
 			<h1>Aktualizacje zaplanowane</h1>
-			<p><i>Lista aktualizacji, które zostaną* zaimplementowane do MC+</i></br>
-			<span style="font-size: 8pt;">* Planowane aktualizacje nie mają określonych konkretnych ram czasowych, dlatego na liście posortowane są alfabetycznie.</p>
-			{% if not pages("updates/planned") is empty %}
-				{% for page in pages("updates/planned")|sort_by("title") if not page.hidden %}
-					<div class="post">
-						<h3><a href="{{ page.url }}">{{ page.title }}</a></h3>{{ page.date }}
-						<p class="date">{{ page.description }}</p>
+			<p>Zaplanowane aktualizacje znajdujące się na liście zostaną w najbliższym czasie zaimplementowane do MC+. Planowane aktualizacje nie mają określonych konkretnych ram czasowych, dlatego na liście posortowane są alfabetycznie.</p>
+
+			<div id="updates-planned" class="list responsive-list">
+			{% set pages = pages("updates/planned") %}
+			{% if not pages is empty %}
+				{% for page in pages|sort_by("title") if not page.hidden %}
+					<div class="update">
+						<div style="display: flow-root">
+							<h4 class="title" style="float:left;"><a href="{{ page.url }}">{{ page.title }}</a></h4>
+						</div>
+						<div class="desc">
+							<p>{{ page.description }}</p>
+						</div>
 					</div>
 				{% endfor %}
 			{% else %}
-				<div class="post">
-					<h4><a href="">Brak aktualizacji do wyświetlenia</a></h4>
+				<div>
+					<p>Brak aktualizacji do wyświetlenia</p>
 				</div>
 			{% endif %}
-			
+			</div>
+
 			<h1>Aktualizacje proponowane</h1>
-			<p><i>Lista aktualizacji, które mogą zostać zaimplementowane do MC+</i></p>
-			{% if not pages("updates/proposed") is empty %}
-				{% for page in pages("updates/proposed")|sort_by("title") if not page.hidden %}
-					<div class="post">
-						<h3><a href="{{ page.url }}">{{ page.title }}</a></h3>{{ page.date }}
-						<p class="date">{{ page.description }}</p>
+			<p>Poniżej znajduje się lista aktualizacji, które mogą zostać zaimplementowane do MC+ ale nie muszą. Proponowane aktualizacje są podparte ogólną koncepcją i relacjami z wydanymi lub zaplanowanymi aktualizacjami.</i></p>
+
+			<div id="updates-proposed" class="list responsive-list">
+			{% set pages = pages("updates/proposed") %}
+			{% if not pages is empty %}
+				{% for page in pages|sort_by("title") if not page.hidden %}
+					<div class="update">
+						<div style="display: flow-root">
+							<h4 class="title" style="float:left;"><a href="{{ page.url }}">{{ page.title }}</a></h4>
+						</div>
+						<div class="desc">
+							<p>{{ page.description }}</p>
+						</div>
 					</div>
 				{% endfor %}
 			{% else %}
 				<div class="post">
-					<h4><a href="">Brak aktualizacji do wyświetlenia</a></h4>
+					<p>Brak aktualizacji do wyświetlenia</p>
 				</div>
 			{% endif %}
-			
+			</div>
+
         </div>
     </div>
 	
