@@ -128,7 +128,6 @@ body { display: flex; flex-direction: column; }
 
 #footer p {
     margin: 0;
-    padding: 2em 0;
 }
 
 #footer h1, h2, h3, h4, h5, h6 {
@@ -185,7 +184,6 @@ body { display: flex; flex-direction: column; }
     }
     .js #nav-toggle > * { vertical-align: middle;  }
 
-    #footer p { padding: 1em 0; }
     #footer .social { padding: 0.5em 0 0.5em 1em; }
 }
 
