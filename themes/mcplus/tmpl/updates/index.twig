@@ -74,7 +74,7 @@
 
     <div id="main" role="main">
         <div class="container">
-
+            {{ toc }}
             {{ content }}
 
             <h1>Aktualizacje wydane</h1>
@@ -86,7 +86,7 @@
                 {% for page in pages|sort_by("time")|reverse if not page.hidden %}
                     <div class="update released">
                         <div style="display: flow-root">
-                            <h3 class="title"><a href="{{ page.url }}">{{ page.title }}</a></h3>
+                            <h3 class="title not-in-toc"><a href="{{ page.url }}">{{ page.title }}</a></h3>
                             {% if not page.date is empty %}
                                 <p class="date" style="float:right;">{{ page.date|date('j F Y') }}</p>
                             {% endif %}
@@ -113,7 +113,7 @@
                 {% for page in pages|sort_by("title") if not page.hidden %}
                     <div class="update">
                         <div style="display: flow-root">
-                            <h4 class="title" style="float:left;"><a href="{{ page.url }}">{{ page.title }}</a></h4>
+                            <h4 class="title not-in-toc" style="float:left;"><a href="{{ page.url }}">{{ page.title }}</a></h4>
                         </div>
                         <div class="desc">
                             <p>{{ page.description }}</p>
@@ -136,7 +136,7 @@
                 {% for page in pages|sort_by("title") if not page.hidden %}
                     <div class="update">
                         <div style="display: flow-root">
-                            <h4 class="title" style="float:left;"><a href="{{ page.url }}">{{ page.title }}</a></h4>
+                            <h4 class="title not-in-toc" style="float:left;"><a href="{{ page.url }}">{{ page.title }}</a></h4>
                         </div>
                         <div class="desc">
                             <p>{{ page.description }}</p>

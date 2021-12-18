@@ -48,7 +48,7 @@ body { display: flex; flex-direction: column; }
 #header, #footer { flex: 0 0 auto; }
 
 #main {
-    padding: 5em 0 4em;
+    padding: 3em 0;
 }
 
 .container {
@@ -114,6 +114,49 @@ body { display: flex; flex-direction: column; }
     content: '';
     display: block;
     clear: both;
+}
+
+/*** BASIC LAYOUT: TOC ***/
+
+#toc {
+    border: 1px solid #cdd;
+    border-radius: 10pt;
+    margin: 0 auto 2.5em;
+    padding: 1em 1.5em;
+}
+
+.toc-none, .toc-bullets, .toc-numbers {
+    padding-inline-start: 20px;
+    padding-block-end   : 2px;
+    padding-block-start : 2px;
+    margin: 0;}
+
+.toc-none {
+    list-style-type: none;
+}
+
+.toc-bullets li, .toc-bullets li li li li {
+    list-style-type: disc;
+}
+.toc-bullets li li, .toc-bullets li li li li li {
+    list-style-type: circle;
+}
+.toc-bullets li li li, .toc-bullets li li li li li li {
+    list-style-type: square;
+}
+
+.toc-numbers {
+    counter-reset  : item;
+    list-style-type: none;
+}
+.toc-numbers li:before {
+    content          : counters(item, ". ") ". ";
+    counter-increment: item;
+}
+
+.toc-heading {
+    font-size  : larger;
+    font-weight: bold;
 }
 
 /*** BASIC LAYOUT: FOOTER ***/
@@ -183,6 +226,12 @@ body { display: flex; flex-direction: column; }
         cursor: pointer;
     }
     .js #nav-toggle > * { vertical-align: middle;  }
+
+    #toc {
+        margin: 0 0 1em;
+        padding: 0.5em 1em;
+        font-size: 85%;
+    }
 
     #footer .social { padding: 0.5em 0 0.5em 1em; }
 }

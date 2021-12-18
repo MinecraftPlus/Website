@@ -54,6 +54,15 @@ plugins_url: ~                      # Pico will try to guess the URL to the plug
                                     #     If this fails, override it here. Example: https://example.com/pico/plugins/
 DummyPlugin.enabled: false          # Force the plugin "DummyPlugin" to be disabled
 
+TOC:                                # Table Of Contents Plugin
+  min_headers: 2                    # Minimum number of headers required to display the ToC
+  min_level: 1                      # Minimum header level displayed in the ToC
+  max_level: 3                      # Maximum header level displayed in the ToC
+  tag: ul                           # The tag used for the list
+  style: bullets                    # The css style applied to the list
+  heading: Spis treści              # Heading text, if a heading for the ToC is desired
+  container: main                   # ID of parent DOM element which content will be scanned for headers.
+
 ##
 # Custom
 #

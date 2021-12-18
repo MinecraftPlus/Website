@@ -31,6 +31,7 @@
 
     <div id="main" role="main">
         <div class="container">
+            {{ toc }}
             {{ content }}
 
             <h1>Aktualnie realizowane zadania</h1>
@@ -63,9 +64,9 @@
                 {% for page in pages("status/steps/done")|sort_by("time")|reverse if not page.hidden %}
                     <div class="post">
                         <div style="display: flow-root">
-                            <h3 style="float:left;">{{ page.title }}</h3>
+                            <h3 class="not-in-toc" style="float:left;">{{ page.title }}</h3>
                             <p class="date" style="float:right;">
-                                {{ page.date|date('j F Y') }}{% if not page.meta.EndDate is empty %}&nbsp~&nbsp{{ page.meta.EndDate|date("j F Y") }}{% endif %}
+                                {{ page.date|date('j F Y') }}{% if not page.meta.EndDate is empty %} ~ {{ page.meta.EndDate|date("j F Y") }}{% endif %}
                             </p>
                         </div>
                         <div>

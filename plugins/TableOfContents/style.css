@@ -1,0 +1,42 @@
+#toc {
+    border          : 1px solid #cdd;
+    background-color: #f5f5ff;
+    margin          : 0;
+    padding         : 1em;
+    font-size       : 80%;
+}
+
+
+.toc-none, .toc-bullets, .toc-numbers {
+    padding-inline-start: 20px;
+    padding-block-end   : 8px;
+    padding-block-start : 4px;
+}
+
+.toc-none {
+    list-style-type: none;  
+}
+
+.toc-bullets li, .toc-bullets li li li li {
+    list-style-type: disc;
+}
+.toc-bullets li li, .toc-bullets li li li li li {
+    list-style-type: circle;
+}
+.toc-bullets li li li, .toc-bullets li li li li li li {
+    list-style-type: square;
+}
+
+.toc-numbers {
+    counter-reset  : item;
+    list-style-type: none;  
+}
+.toc-numbers li:before {
+    content          : counters(item, ". ") ". ";
+    counter-increment: item;
+}
+
+.toc-heading {
+    font-size  : larger;
+    font-weight: bold;
+}
