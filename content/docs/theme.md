@@ -1,6 +1,8 @@
 ---
 title: Theme Styling Test
 hidden: true
+
+Template: tmpl/index
 ---
 
 Theme Styling Test

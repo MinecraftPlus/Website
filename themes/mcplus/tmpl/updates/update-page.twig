@@ -31,12 +31,12 @@
 
     <div id="main" role="main">
         <div class="container">
-
+            {{ toc }}
             {{ content }}
 
             {% if not meta.Dependencies is empty %}
                 <hr>
-                <h2>Zależności z innymi modyfikacjami</h2>
+                <h1>Zależności z innymi modyfikacjami</h1>
                 {% for dependency in meta.Dependencies %}
                     <!--<li>{{ dependency.id }}&nbsp;{{ dependency.desc }}&nbsp;{{ dependency.type }}</li>-->
                     <ul>
