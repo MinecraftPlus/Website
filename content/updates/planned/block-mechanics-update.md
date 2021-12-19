@@ -30,7 +30,7 @@ Każdy blok posiadać będzie określoną wytrzymałość (maksymalne "HP" bloku
 W przypadku używania narzędzi do wydobywania bloków (co dotyczy wszystkich bloków, nie tylko surowców) każde użycie (ruch) narzędziem powoduje jego stopniowe żużywanie.
 
 
-## Zalety modyfikacji
+# Zalety modyfikacji
  - większy realizm wydobycia (każdy ruch narzędzia wykonuje konkretną pracę, bez bezsensowanego machania)
  - możliwość łatwego skalowania zdolności wydobywania poprzez statystyki postaci np. siłę
  - możliwość współpracy kilku graczy przy wydobywaniu tego samego bloku

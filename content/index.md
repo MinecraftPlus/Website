@@ -80,7 +80,7 @@ Projekt będzie oferował natywne wsparcie dla interakcji z NPC poprzez odpowied
 Jeśli chcesz uruchomić klienta lub serwer w wydaniu MiecraftPlus, musisz pobrać odpowiedni instalator z sekcji [Pobieranie](download).
 Znajdziesz tam informacje o tym, skąd i jak pobrać odpowiednią konfigurację wersji pozwalającą uruchomić klienta lub serwer MC+.
 
-# Plany na przyszłość:
+# Plany na przyszłość
 
 Kolejnymi krokami zaplanowanymi dla projektu jest:
 - zbudowanie zaufanej społeczności zainteresowanej korzystaniem z MC+
@@ -94,4 +94,4 @@ Lista planowanych modyfikacji jest długa (a zawiera tylko najważniejsze pomys�
 
 W skrócie przyszłość tego projektu zależy wyłącznie od jego odbioru przez szersze grono graczy i twórców serwerów Minecraft.
 
-#### Więc jeśli jesteś zainteresowany projektem i chcesz dowiedzieć się więcej, zajrzyj na serwer [Discord](https://discord.gg/qdRMt2m) projektu.
+<span style="font-size: 1.25rem; font-weight: bold;">Więc jeśli jesteś zainteresowany projektem i chcesz dowiedzieć się więcej, zajrzyj na serwer [Discord](https://discord.gg/qdRMt2m) projektu.</span>

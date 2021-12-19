@@ -26,14 +26,14 @@ W tej aktualizacji do gry dodane zostały działa armatnie wraz z kulami armatni
 
 
 
-## Działo armatnie
+# Działo armatnie
 
 <div style="padding: 10pt 0;">
     <img src="%assets_url%/images/cannon-update_cannon-front.png" style="width: 49%;">
     <img src="%assets_url%/images/cannon-update_cannon-back.png" style="width: 49%;">
 </div>
 
-### Crafting działa
+## Crafting działa
 
 <img src="%assets_url%/images/cannon-update_cannon-crafting.png" style="float: right; margin-left: 20pt;">
 Receptura pozwalająca craftować działo jest recepturą kształtową.
@@ -44,7 +44,7 @@ Dostępne są receptury z wszystkimi wariantami desek.
 </br>
 
 
-## Pociski
+# Pociski
 
 <img src="%assets_url%/images/cannon-update_cannonballs.png" style="float: right; margin-left: 20pt;">
 Aktualizacja dodaje do gry dwa warianty pocisków artyleryjskich - pociski burzące oraz zapalające.
@@ -52,7 +52,7 @@ Aktualizacja dodaje do gry dwa warianty pocisków artyleryjskich - pociski burz�
 Pociski burzące posiadają dużą siłę przebicia i powodują wybuch, który zadaje sporą ilość obrażeń trafionym blokom.  
 Pociski zapalające posiadają zdolność zapalania otoczenia w które uderzą. Nie posiadają zdolności przebijających pozwalających na niszczenie silnych fortyfikacji, szczególnie tych niepalnych.
 
-### Crafting pocisku
+## Crafting pocisku
 
 <img src="%assets_url%/images/cannon-update_cannonball-crafting.png" style="float: right; margin-left: 20pt;">
 Receptura pozwalająca craftować kule armatnie również jest recepturą kształtową.
@@ -61,9 +61,9 @@ Receptura na zapalającą kulę armatnią jest delikatną wariacją receptury ku
 
 
 
-## Obsługa działa
+# Obsługa działa
 
-### Poruszanie działem
+## Poruszanie działem
 
 Działo armatnie dodane w aktualizacji posiada naturę pojazdu jak łódka lub wagonik. Gracz może przejąć kontrolę nad działem poprzez kliknięcie `PPM` na działo.
 
@@ -79,7 +79,7 @@ Aby zmienić kąt nachylenia lufy, należy użyć ruchu `przód/tył` z wciśni�
 </center>
 </br>
 
-### Ładowanie i odpalanie działa
+## Ładowanie i odpalanie działa
 
 Podstawowym sposobem na załadowanie działa jest "wrzucenie" pożądanej ilości prochu i kulę armatnią do lufy działa.  
 Jako wskaźnik gotowości działa do wystrzału jest lont zapalnika na tylnej części lufy. Gotowość do wystrzału nie wymaga załadowania kuli armatniej!
@@ -95,7 +95,7 @@ Aby oddać strzał, należy stanąć za działem, wycelować w zapalnik i trzyma
 </center>
 </br>
 
-### Otwieranie menu działa
+## Otwieranie menu działa
 
 Poza metodą ładowania działa poprzez "wrzucenie" przedmiotu do lufy działa, istnieje możliwość otworzenie graficznego menu działa. Menu to pozwala załadować działo poprzez przeniesienie prochu i kuli armatniej w odpowiedni slot.  
 Menu to pozwala także na rozładowanie działa poprzez wyciągnięcie kuli - załadowanego prochu nie można już odzyskać.
@@ -112,7 +112,7 @@ Aby otowrzyć graficzne menu działa należy kliknąć `PPM` na działo z przytr
 
 
 
-## Moździerz
+# Moździerz
 
 W drugiej wersji aktualizacji dodane zostały moździerze, będące alternatywą dla dział które mają głównie poziomy tor lotu - moździerz pozwala na ostrzał wroga ukrytego za fortyfikacjami z powietrza.
 
@@ -121,7 +121,7 @@ W drugiej wersji aktualizacji dodane zostały moździerze, będące alternatywą
     <img src="%assets_url%/images/cannon-update_mortar-back.png" style="width: 49%;">
 </div>
 
-### Crafting moździerza
+## Crafting moździerza
 
 <img src="%assets_url%/images/cannon-update_mortar-crafting.png" style="float: right; margin-left: 20pt;">
 Receptura pozwalająca craftować moździerz jest recepturą kształtową. Różni się od działa tylko tym, że wymaga jednego bloku żelaza mniej.
@@ -129,13 +129,13 @@ Receptura pozwalająca craftować moździerz jest recepturą kształtową. Róż
 Dostępne są receptury z wszystkimi wariantami desek.
 </br>
 
-### Różnica między działem a moździerzem
+## Różnica między działem a moździerzem
 
 Moździerze z uwagi na krótszą lufę posiadają mniejszą niż działa zdolność miotania pociskami. Ich konstrukcja ogranicza również kąt strzału. Moździerz można także załadować stojąc za nim (od strony zapalnika) jeśli tylko odpowiednio odchyli się lufę.  
 Poza tymi różnicami, działanie moździerza jest analogiczne do działania działa.
 
 
-## Zalety modyfikacji
+# Zalety modyfikacji
  - zwiększenie realizmu oblężeń
  - kontrola toru lotu przez zmianę kąta lufy lub ilość prochu
  - kontrola uzyskanych efektów ostrzału przez użycie pocisków burzących lub zapalających

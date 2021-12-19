@@ -18,7 +18,7 @@ Dependencies:
       type: extension
 ---
 
-Money Update - czas to pieniądz
+# Money Update - czas to pieniądz
 -----
 
 Aktualizacja dodaje do gry przedmiot monety, który jest wybijany na kowadle z metali szlachetnych (wartościowych) jak złoto.

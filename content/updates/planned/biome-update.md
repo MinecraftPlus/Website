@@ -33,6 +33,6 @@ Sytuacja ma się podobnie w przypadku roślinności oraz zwierząt. Co prawda na
 
 Modyfikacja ma na celu regulację ww. wymienionych oraz innych przypadków. Regulacja ma polegać na przydzieleniu do biomów odpowiednich bloków surowców oraz stworzeń, dopasowaniu ich ilości (rzadkości występowania) oraz warunków występowania (np. zakresy wysokości w chunku dla bloków). W przypadku zwierząt regulacji ulegnie zdolność przeżycia w danym biomie (np. niedźwiedź polarny nie przeżyje na pustyni) lub funkcjonowania w danym biomie (np. krowa nie będzie rodzić młodych cieląt na pustyni).
 
-## Zalety modyfikacji
+# Zalety modyfikacji
  - zróżnicowanie terenów pod względem atrakcyjności i przydatności
  - kontrola terytorialna nabiera znaczenia w przypadku zabezpieczania źródeł surowców
