@@ -4,6 +4,31 @@
 
     {% include 'tmpl/metahead.twig' %}
 
+    <style>
+        div.task-list {
+            margin: .5em;
+            font-size: .8rem;
+        }
+
+        .icon-wait:before {
+            font-family: "fontello";
+            content: '\e807';
+        }
+        .icon-done:before {
+            font-family: "fontello";
+            content: '\e802';
+            color: green;
+        }
+
+        @media (min-width: 765px) {
+            div.responsive-list {
+                columns: 2 auto;
+            }
+            div.task {
+                display: block;
+            }
+        }
+    </style>
 </head>
 <body{% if config.theme_config.widescreen %} class="widescreen"{% endif %}>
 
@@ -24,9 +49,28 @@
                         </div>
                         <div>
                             <p class="desc">{{ page.description }}</p>
-                            {% if not page.meta.Progress is empty %}
-                                {% include 'tmpl/progressbar.twig' with {'percent': page.meta.Progress} %}
-                            {% endif %}
+                                {% if not page.meta.Progress is empty %}
+                                    {% set progress = page.meta.Progress %}
+                                {% endif %}
+								{% if not page.meta.Tasks is empty %}
+                                    {% set progress = page.meta.Tasks|filter(t => t.status == 'done')|length / page.meta.Tasks|length * 100 %}
+                                {% endif %}
+
+                                {% if not progress is empty %}
+                                    {% include 'tmpl/progressbar.twig' with {'percent': progress|round} %}
+                                {% endif %}
+
+                                {% if not page.meta.Tasks is empty %}
+                                    <div class="task-list responsive-list">
+                                         {% for task in page.meta.Tasks if not task.name is empty %}
+                                            <div class="task">
+                                                <div style="display: flow-root">
+                                                    <span class="icon-{{ task.status }}"></span><span>{{ task.name }}</span>
+                                                </div>
+                                            </div>
+                                         {% endfor %}
+                                    </div>
+                                {% endif %}
                             <div style="margin-top: 0.75em;">{{ page.id|content }}</div>
                         </div>
                         <hr>
