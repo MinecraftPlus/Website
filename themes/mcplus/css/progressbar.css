@@ -1,0 +1,24 @@
+.progressbar-wrapper {
+    color: #000!important;
+    background-color: #e6e5e5!important;
+}
+.progressbar {
+    color: #fff!important;
+    background-color: #4984c7!important; /* blue */
+    background-color: #4caf50!important; /* green */
+    text-align: center!important;
+    font-size: 0.6rem;
+    padding: 0pt 10px 0 15px;
+}
+.rounded {
+    border-radius: 15px;
+}
+.zero {
+    background-color: #d84848!important; /* red */
+}
+.completed {
+    background-color: #4caf50!important; /* green */
+}
+.percentage {
+    margin-left: -6pt;
+}

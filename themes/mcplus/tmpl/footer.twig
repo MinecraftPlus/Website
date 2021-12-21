@@ -1,0 +1,19 @@
+<div id="footer">
+    <div class="container">
+        <div class="inner align-center">
+            <h1>Zainteresowany?</h1>
+            <p class="description align-center">
+                Odwiedź nasz <a href="https://discord.gg/qdRMt2m">serwer Discord!</a><br>
+                Zajrzyj również na nasz <a href="https://bitbucket.org/minecraftplus">BitBucket.</a>
+            </p>
+        </div>
+        <div class="social">
+            {% for social in pages["_meta"].meta.social %}
+                <a href="{{ social.url }}" title="{{ social.title }}" role="button">
+                    <span class="icon-{{ social.icon }}" aria-hidden="true"></span>
+                    <span class="sr-only">{{ social.title }}</span>
+                </a>
+            {% endfor %}
+        </div>
+    </div>
+</div>

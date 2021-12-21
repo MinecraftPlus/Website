@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html class="no-js">
+<head>
+
+    {% include 'tmpl/metahead.twig' %}
+
+</head>
+<body{% if config.theme_config.widescreen %} class="widescreen"{% endif %}>
+
+    {% include 'tmpl/header.twig' %}
+
+    <div id="main" role="main">
+        <div class="container">
+            {{ toc }}
+            {{ content }}
+
+            {% if not meta.Dependencies is empty %}
+                <hr>
+                <h1>Zależności z innymi modyfikacjami</h1>
+                {% for dependency in meta.Dependencies %}
+                    <!--<li>{{ dependency.id }}&nbsp;{{ dependency.desc }}&nbsp;{{ dependency.type }}</li>-->
+                    <ul>
+                    {% set update_pages = pages("updates/proposed")|merge(pages("updates/planned"))|merge(pages("updates/released")) %}
+                    {% for page in update_pages if page.title == dependency.id %}
+                        <li>
+                            {% if dependency.type == "dependent" %}Zależna od&nbsp;{% elseif dependency.type == "extension" %}Uzupełniająca dla&nbsp;{% endif %}<a href="{{ page.url }}">{{ page.title }}</a> -&nbsp;{{ dependency.desc }}
+                        </li>
+                    {% endfor %}
+                    </ul>
+                {% endfor %}
+            {% endif %}
+        </div>
+    </div>
+
+    {% include 'tmpl/footer.twig' %}
+
+    <script src="{{ theme_url }}/js/modernizr-3.3.1-custom.min.js" type="text/javascript"></script>
+    <script src="{{ theme_url }}/js/utils.js" type="text/javascript"></script>
+    <script src="{{ theme_url }}/js/pico.js" type="text/javascript"></script>
+
+</body>
+</html>
