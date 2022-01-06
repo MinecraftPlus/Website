@@ -156,18 +156,14 @@ class MultiLanguage extends AbstractPicoPlugin
     public function on404ContentLoaded(&$rawContent)
     {
         $content_dir = $this->getPico()->getConfig('content_dir');
-        $content_dir_length = strlen($content_dir);
         $content_ext = $this->getPico()->getConfig('content_ext');
 
-        $file = $this->getPico()->getRequestFile();
-        $file_length = strlen($file);
-        $file_path = explode('/', substr($file, $content_dir_length, $file_length));
+        $language = $this->current_language;
 
         // Checks if a 404 page exists at the root of the
         // content_dir when the file path does not use a language
-        if (!in_array($file_path[0], $this->available_languages) && !is_file($content_dir . '/404' . $content_ext)) {
+        if (!in_array($language, $this->available_languages) || !is_file($content_dir . '/404' . $content_ext)) {
             // Load the contents of the 404 file for the language
-            $language = $this->getBrowserLanguage();
             if (is_file($content_dir . $language . '/404' . $content_ext)) {
                 $rawContent = $this->getPico()->loadFileContent($content_dir . $language . '/404' . $content_ext);
             }
