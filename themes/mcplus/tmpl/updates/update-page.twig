@@ -16,14 +16,14 @@
 
             {% if not meta.Dependencies is empty %}
                 <hr>
-                <h1>Zależności z innymi modyfikacjami</h1>
+                <h1>{{ 'update-page.dependencies'|translate }}</h1>
                 {% for dependency in meta.Dependencies %}
                     <!--<li>{{ dependency.id }}&nbsp;{{ dependency.desc }}&nbsp;{{ dependency.type }}</li>-->
                     <ul>
-                    {% set update_pages = pages("updates/proposed")|merge(pages("updates/planned"))|merge(pages("updates/released")) %}
+                    {% set update_pages = pages("#{current_language}/updates/proposed") | merge(pages("#{current_language}/updates/planned")) |  merge(pages("#{current_language}/updates/released")) %}
                     {% for page in update_pages if page.title == dependency.id %}
                         <li>
-                            {% if dependency.type == "dependent" %}Zależna od&nbsp;{% elseif dependency.type == "extension" %}Uzupełniająca dla&nbsp;{% endif %}<a href="{{ page.url }}">{{ page.title }}</a> -&nbsp;{{ dependency.desc }}
+                            {% if dependency.type == "dependent" %}{{ 'update-page.dependent'|translate }}&nbsp;{% elseif dependency.type == "extension" %}{{ 'update-page.extension'|translate }}&nbsp;{% endif %}<a href="{{ page.url }}">{{ page.title }}</a> -&nbsp;{{ dependency.desc }}
                         </li>
                     {% endfor %}
                     </ul>

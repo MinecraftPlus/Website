@@ -4,6 +4,8 @@ Description: Strona statusu projektu
 Author: Wituch
 
 Template: tmpl/status/index
+Language: pl
+pid: status
 
 Date: 2020-09-10
 Order: 1
