@@ -130,6 +130,9 @@ class MultiLanguage extends AbstractPicoPlugin
                 $url = $language;
             }
         }
+
+        // Estimate language from URL
+        $this->current_language = substr($url, 0, 2);
     }
 
     /**
@@ -188,10 +191,12 @@ class MultiLanguage extends AbstractPicoPlugin
     public function onMetaParsed(array &$meta)
     {
         // Checks if the language of the page is set and that it is available for the site
-        if (!$meta['language'] || !in_array($meta['language'], $this->available_languages)) {
-            $meta['language'] = $this->default_language;
+        if ($meta['language']) {
+            if (in_array($meta['language'], $this->available_languages)) {
+                $this->current_language = $meta['language'];
+            } else
+                $this->current_language = $this->default_language;
         }
-        $this->current_language = $meta['language'];
     }
 
     /**
@@ -238,7 +243,11 @@ class MultiLanguage extends AbstractPicoPlugin
      */
     public function onSinglePageLoaded(array &$pageData)
     {
-        $language = $pageData['meta']['language'] ?? $this->default_language;
+        if (isset($pageData['meta']['language']) && !empty($pageData['meta']['language'])) {
+            $language = $pageData['meta']['language'];
+        } else
+            $language = substr($pageData['id'], 0, 2);
+
         $page_id = $pageData['meta']['pid'];
 
         // set page.language, page.is_current_language and page.id
@@ -281,6 +290,7 @@ class MultiLanguage extends AbstractPicoPlugin
     {
         // only keep pages with same language as current
         $pages = array_filter($pages, function ($page) {
+            $page_url_language = substr($page[id], 0, 2);
             return $page['is_current_language'];
         });
     }
