@@ -121,13 +121,15 @@ class MultiLanguage extends AbstractPicoPlugin
         $content_dir = $this->getPico()->getConfig('content_dir');
         $content_ext = $this->getPico()->getConfig('content_ext');
 
+        $url_language = explode('/', $url)[0];
+
         // Checks if an index page exists at the root of the
         // content_dir when the url is the base_url
         if ($url == '' && !is_file($content_dir . '/index' . $content_ext)) {
             $language = $this->getBrowserLanguage();
 
             // Redirects to the index page of the language
-            if (substr($url, 0, 2) !== $language)
+            if ($url_language !== $language)
                 header('Location: ' . $language . $url);
 
             if (is_file($content_dir . $language . '/index' . $content_ext)) {
@@ -136,7 +138,10 @@ class MultiLanguage extends AbstractPicoPlugin
         }
 
         // Estimate language from URL
-        $this->current_language = substr($url, 0, 2);
+        if (in_array($url_language, $this->available_languages)) {
+            $this->current_language = $url_language;
+        } else
+            $this->current_language = $this->default_language;
     }
 
     /**
@@ -250,7 +255,7 @@ class MultiLanguage extends AbstractPicoPlugin
         if (isset($pageData['meta']['language']) && !empty($pageData['meta']['language'])) {
             $language = $pageData['meta']['language'];
         } else
-            $language = substr($pageData['id'], 0, 2);
+            $language = explode('/', $pageData['id'])[0];
 
         $page_id = $pageData['meta']['pid'];
 
@@ -294,7 +299,7 @@ class MultiLanguage extends AbstractPicoPlugin
     {
         // only keep pages with same language as current
         $pages = array_filter($pages, function ($page) {
-            $page_url_language = substr($page[id], 0, 2);
+            $page_url_language =  explode('/', $page['id'])[0];
             return $page['is_current_language'];
         });
     }
