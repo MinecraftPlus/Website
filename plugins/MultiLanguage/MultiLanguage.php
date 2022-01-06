@@ -124,8 +124,12 @@ class MultiLanguage extends AbstractPicoPlugin
         // Checks if an index page exists at the root of the
         // content_dir when the url is the base_url
         if ($url == '' && !is_file($content_dir . '/index' . $content_ext)) {
-            // Redirects to the index page of the language
             $language = $this->getBrowserLanguage();
+
+            // Redirects to the index page of the language
+            if (substr($url, 0, 2) !== $language)
+                header('Location: ' . $language . $url);
+
             if (is_file($content_dir . $language . '/index' . $content_ext)) {
                 $url = $language;
             }
