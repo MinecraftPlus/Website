@@ -4,6 +4,8 @@ Description: Strona pobierania
 Author: Wituch
 
 Template: tmpl/index
+Language: pl
+pid: download
 
 Date: 2020-10-10
 Order: 3

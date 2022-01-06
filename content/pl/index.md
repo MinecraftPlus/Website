@@ -4,6 +4,7 @@ Description: MinecraftPlus
 Author: Wituch
 
 Template: tmpl/index
+Language: pl
 
 Date: 2020-08-10
 Order: 0

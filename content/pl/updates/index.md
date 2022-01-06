@@ -1,9 +1,11 @@
 ---
 Title: Aktualizacje
-Description: Strona pobierania
+Description: Strona z listą aktualizacji
 Author: Wituch
 
 Template: tmpl/updates/index
+Language: pl
+pid: updates
 
 Date: 2020-08-10
 Order: 2
