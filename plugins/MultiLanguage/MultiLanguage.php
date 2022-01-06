@@ -253,7 +253,13 @@ class MultiLanguage extends AbstractPicoPlugin
         } else
             $language = explode('/', $pageData['id'])[0];
 
-        $page_id = $pageData['meta']['pid'];
+        if (isset($pageData['meta']['pid']) && !empty($pageData['meta']['pid'])) {
+            $page_id = $pageData['meta']['pid'];
+        } else {
+            // Generate fake pid for pages without specified in .md file
+            $language_length = strlen($language);
+            $page_id = $pageData['meta']['pid'] = substr($pageData['id'], $language_length + 1);
+        }
 
         // set page.language, page.is_current_language and page.id
         $pageData['language'] = $language;
