@@ -1,6 +1,6 @@
 ---
 Title: Ships Update
-Description: Aktualizacja dodająca do gry okręty, które budowane z bloków w portach - oparte o mod Ships by Cuchaz
+Description: An update that adds ships that are built from blocks in ports to the game - based on the Ships by Cuchaz mod
 Author: Wituch
 Date:
 
@@ -18,4 +18,4 @@ Template: tmpl/updates/update-page
 # Ships Update
 -----
 
-Opis aktualizacji jest jeszcze niedostępny.
+The update description is not yet available.

@@ -1,6 +1,6 @@
 ---
 Title: Knowledge Update
-Description: Aktualizacja dodająca do gry system rozwoju postaci w oparciu drzewka umiejętności
+Description: An update that adds a character development system based on skill trees to the game
 Author: Wituch
 Date:
 
@@ -8,80 +8,80 @@ Template: tmpl/updates/update-page
 
 Dependencies:
     - id: Character Update
-      desc: Poprzez wpływ statystyk postaci (np. siły) na ilość zadawanych "obrażeń" - analogicznie silniejsza postać gracza uderza z większą siłą
+      desc: Through the influence of the character's statistics (e.g. strength) on the amount of "damage" dealt - similarly, a stronger player's character hits with greater force
       type: dependent
     - id: Bookshelf Update
-      desc: Poprzez konieczność magazynowania ksiąg i zawartej w nich wiedzy w bibliotekach
+      desc: By having to store books and the knowledge they contain in libraries
       type: extension
     - id: Block Mechanics Update
-      desc: Poprzez statystyki postaci wpływ na zużycie narzędzi - posiadanie konkretnych umiejętności lub wysoka zręczność pozwoli je zmniejszać
+      desc: Influence on the consumption of tools through character statistics - having specific skills or high dexterity will reduce them
       type: extension
 ---
 
-# Knowledge Update - wiedza to potęgi klucz
+# Knowledge Update - knowledge is the key of powers
 -----
 
-Aktualizacja odpowiedzialna jest za dostarczenie systemu rozwoju postaci, którego od zawsze brakowało podczas gry na serwerach RPG.
+The update is responsible for providing a character development system that has always been missing when playing on RPG servers.
 
 
-# System umiejętności - odwrotny system osiągnięć
+# Skill system - reverse achievement system
 
-Gra w oryginalnym wydaniu dostarcza wbudowany system osiągnięć gracza. Osiągnięcia są odblokowywane wraz z aktywnością gracza przy wykonywaniu różnych czynności.
-Aktualizacja odwraca ten system - gracz musi pozyskać konkretne umiejętności by móc wykonywać powiązane czynności lub w przypadku prostych czynności by móc wykonywać je dobrze, bez wad.
-> Przykładem takiej prostej umiejętności może być pozyskiwanie drewna - gracz którego postać nie posiada danej umiejętności będzie miała problemy z utrzymaniem siekiery. Po prostu będzie wypadać mu z rąk, albo będzie się nią sam ranił.
+The original version of the game provides a built-in player achievement system. Achievements are unlocked as the player is active while performing various activities.
+The update reverses this system - the player must acquire specific skills to be able to perform related activities or, in the case of simple activities, to be able to do them well, without flaws.
+> An example of such a simple skill is logging - a player whose character does not have the skill will have problems with maintaining the ax. It will just fall out of his hands, or he will hurt himself with it.
 
 
-## Drzewo umiejętności
+## Skill tree
 
-Aktualnie niedostępne, ze względu na brak konkretnego opracowania.
-Gałęzie drzewa umiejętności:
- - walka (walka wręcz, broń biała, dystansowa, obsługa broni i maszyn wojennych)
- - górnictwo (wydobycie rud i minerałów, materiałów sypkich)
- - rolnictwo (leśnictwo, rolnictwo, ogrodnictwo, zootechnika, rybactwo, weterynaria)
- - alchemia (zielarstwo, ziołolecznictwo, medycyna)
- - rzemiosło (crafting i pochodne)
+Currently not available due to the lack of a specific study.
+Skill Tree Branches:
+ - combat (hand-to-hand combat, melee weapons, ranged weapons, handling weapons and war machines)
+ - mining (extraction of ores and minerals, loose materials)
+ - agriculture (forestry, agriculture, horticulture, animal husbandry, fishing, veterinary medicine)
+ - alchemy (herbal medicine, herbal medicine, medicine)
+ - crafting (crafting and derivatives)
  - ????
 
 
-## Pozyskiwanie umiejętności
+## Skills acquisition
 
-Pozyskiwanie umiejętności "od zera" będzie procesem wymagającym zaplanowania przyszłości postaci.
-
-
-## Poziomy umiejętności
-
-Samo pozyskanie konkretnej umiejętności to nie koniec możliwości aktualizacji. Pozyskane umiejętności mogą być ulepszane na wyższy poziom skutkując lepszą skutecznością postaci w danej dziedzinie.
-
-> Znów na przykładzie drwala - drwal z wysoką umiejętnością pozyskiwania drewna może uderzać siekierą odpowiednio lepiej i mieć szansę by pozyskać więcej drewna (podobnie jak enchant 'szczęście').
+Acquiring skills "from scratch" will be a process that will require planning for the character's future.
 
 
-# Księgi Wiedzy
+## Skill Levels
 
-Ostatnim elementem składowym aktualizacji, jest dodanie do książek możliwości przechowywania i przekazywania wiedzy tj. umiejętności pozyskanych przez postać.
+The mere acquisition of a specific skill is not the end of the upgrade options. The acquired skills can be improved to a higher level, resulting in a better performance of the character in a given field.
 
-## Pozyskiwanie ksiąg
-
-Drogi pozyskania ksiąg wiedzy mogą być różne - kupno od NPC, znalezienie w skrzyniach czy też zwykła kradzież. Możliwości jest mnóstwo.
-
-Takie księgi gracz będzie mógł także stworzyć sam by przekazywać swoją wiedzę innym. Oczywiście po spełnieniu odpowiednich warunków dot. np. inteligencji i zdobyciu umiejętności przekazywania wiedzy.
-
-> Można by powiedzieć, że księgi wiedzy są bardzo podobnym rozwiązaniem co enchantowane książki.
+> Again with the example of the lumberjack - a lumberjack with a high harvesting skill can hit the ax better accordingly and have a chance to get more wood (similar to the 'luck' enchant).
 
 
-## Czytanie ksiąg
+# Books of Knowledge
 
-Gracz po przeczytaniu księgi wiedzy pozyskuje dla swojej postaci umiejętność lub zwiększa jej statystyki o to, czego dotyczy dana księga. 
-Każda księga będzie miała odpowiednią żywotność, która zmniejsza się z każdym czytaniem, a po której przekroczeniu ulegnie zniszczeniu.
+The last component of the update is adding to books the possibility of storing and transferring knowledge, i.e. skills acquired by a character.
 
-> Gdy znajdziesz starą zakurzoną księgę, obchodź się z nią bardzo ostrożnie! Inaczej cała cenna wiedza przepadnie...
+## Acquisition of books
 
-Oczywiście nie da się od zera przeskoczyć do bohatera... Czytanie ksiąg z bardzo zaawansowaną wiedzą przez graczy, których postać jest na niskim poziomie poskutkuje wyłącznie tym, że nic oni z tej księgi nie zrozumieją.
+The ways of obtaining books of knowledge can be different - buying from an NPC, finding them in chests or simply stealing. There are plenty of possibilities.
+
+The player will also be able to create such books himself to pass his knowledge to others. Of course, after meeting the appropriate conditions regarding e.g. intelligence and acquiring the ability to transfer knowledge.
+
+> You could say that books of knowledge are a very similar solution to enchanted books.
 
 
-# Zalety modyfikacji
- - różnicowanie postaci graczy zależnie od obranej drogi rozwoju i stylu gry gracza
- - realne przełożenie czasu poświęconego na grę i rozwój postaci w konkretne profity
- - modyfikowanie zakresu możliwych akcji wykonywanych przez graczy poprzez umiejętności (określone akcje np. crafting wyśmienitych pancerzy wyłącznie dla postaci które zgłębiły kowalstwo)
- - możliwość pozyskania wiedzy (umiejętności lub zwiększenia statystyk) z ksiąg
- - możliwość przekazywania wiedzy którą samemu się posiadło, postaciom innych graczy poprzez spisywanie ksiąg
- - stymulowanie współpracy między graczami i dzielenia się obowiązkami poprzez uniemożliwienie szybkiego stworzenia "samowystarczalnej postaci"
+## Reading books
+
+After reading the book of knowledge, the player acquires a skill for his character or increases its statistics by what the book concerns.
+Each book will have an appropriate vitality, which decreases with each reading, and after which it is exceeded it will be destroyed.
+
+> When you find an old dusty book, be very careful with it! Otherwise all valuable knowledge will be lost...
+
+Of course, it is impossible to jump to the hero from scratch... Reading books with very advanced knowledge by players whose character is at a low level will only result in the fact that they will not understand anything from this book.
+
+
+# Advantages of modification
+  - differentiation of players' characters depending on the chosen development path and the player's style of play
+  - real translation of the time devoted to the game and character development into specific profits
+  - modifying the range of possible actions performed by players through skills (specific actions, e.g. crafting excellent armor only for characters who have mastered blacksmithing)
+  - the possibility of acquiring knowledge (skills or increasing statistics) from books
+  - the ability to transfer the knowledge that you have yourself to the characters of other players by writing down books
+  - stimulating cooperation between players and sharing of responsibilities by preventing the rapid creation of "self-sufficient character"

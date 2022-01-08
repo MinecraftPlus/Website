@@ -1,6 +1,6 @@
 ---
 Title: Block Mechanics Update
-Description: Aktualizacja zmieniająca sposób niszczenia bloków
+Description: Update changing the way blocks are broken
 Author: Wituch
 Date:
 
@@ -8,31 +8,31 @@ Template: tmpl/updates/update-page
 
 Dependencies:
     - id: Character Update
-      desc: Poprzez wpływ statystk postaci (np. siły) na ilośc zadawanych "obrażen" - analogicznie silniejsza postać gracza uderza z większą siłą
+      desc: Due to the influence of the character's statistics (e.g. strength) on the amount of "damage" dealt - similarly, the stronger character of the player hits with greater force
       type: dependent
     - id: Cannon Update
-      desc: Poprzez możliwość kumulowania obrażeń zadawanych przez kule armatnie
+      desc: By being able to stack damage dealt by cannonballs
       type: extension
 ---
 
-# Block Mechanics Update - nowe zasady
+# Block Mechanics Update - new rules
 -----
 
-Aktualizacja wprowadzić ma całkowicie nowe spojrzenie na funkcjonowanie bloków w grze - każdy z bloków będzie w stanie przechowywać informacje o otrzymanych obrażeniach.
+The update is to introduce a completely new look at the functioning of blocks in the game - each block will be able to store information about received damage.
 
-W oryginalnej wersji, każdy blok który jest możliwy do wydobycia posiada odpowiednią "twardość" definiującą czas który potrzebny jest do wydobycia bloku narzędziem wykonanym z konkretnego materiału.  Przykładowo dla dowolnego bloku drewna jego ścięcie przy pomocy żelaznej siekierki trwa 0,5s (wg. Minecraft Wiki).  
-Sprawa wygląda zupełnie inaczej w przypadku twardszych bloków np. obsydianu którego wydobycie przy użyciu diamentowej siekierki trwa 9,4s. Jeśli w trakcie wydobywania obsydianu przerwiemy kopanie, cały postęp przepada...
+In the original version, each extractable block has a certain "hardness" that defines the time needed to extract a block with a tool made of a specific material. For example, for any block of wood, its cutting with an iron ax takes 0.5 seconds(according to Minecraft Wiki).
+The case is completely different in the case of harder blocks, e.g. obsidian, which takes 9.4 seconds to extract using a diamond ax. If we stop mining while mining obsidian, all progress is lost...
 
-> Co jeśliby sprawić, by wydobycie konkretnych bloków wymagało zadania odpowiedniej ilości "obrażeń" powodujących jego wydobycie?
+> What if you made mining a specific block require enough "damage" to mine it?
 
-Każdy blok posiadać będzie określoną wytrzymałość (maksymalne "HP" bloku). Wraz z otrzymywaniem obrażeń i obniżaniem poziomu "HP" na bloku pojawią się postępujące ślady zniszczenia (tak jak w oryginalnym wydaniu, podczas kopania). Gdy poziom "HP" bloku spadnie do 0 lub mniej, zostanie on zależnie od źródła obrażeń, wydobyty (np. siekierą, kilofem) lub zniszczony (np. przez wybuch).
+Each block will have a specific durability (maximum block "HP"). As you take damage and lower the "HP" level, progressive traces of destruction will appear on the block (as in the original release, when digging). When the "HP" level of a block drops to 0 or less, it will be picked up (eg with an ax, pickaxe) or destroyed (eg by an explosion) depending on the source of the damage.
 
-W przypadku używania narzędzi do wydobywania bloków (co dotyczy wszystkich bloków, nie tylko surowców) każde użycie (ruch) narzędziem powoduje jego stopniowe żużywanie.
+When using tools to extract blocks (which applies to all blocks, not just raw materials), each use (movement) of the tool causes its gradual wear.
 
 
-# Zalety modyfikacji
- - większy realizm wydobycia (każdy ruch narzędzia wykonuje konkretną pracę, bez bezsensowanego machania)
- - możliwość łatwego skalowania zdolności wydobywania poprzez statystyki postaci np. siłę
- - możliwość współpracy kilku graczy przy wydobywaniu tego samego bloku
- - synergia z modyfikacją dodającą działa armatnie, poprzez możliwość budowania mocnych fortyfikacji (wymagających kilku trafień do przebicia)
- - możliwość zaimplementowania erozji z biegiem czasu, bloków uszkodzonych powyżej określonego limitu bloków np. cegieł w fortyfikacjach jak i "samogojenie" np. bloków piasku
+# Advantages of the modification
+ - greater realism of extraction (each movement of the tool does a specific job, without senseless waving)
+ - the ability to easily scale the extraction ability through character statistics, e.g. strength
+ - the possibility of cooperation of several players while extracting the same block
+ - synergy with the modification that adds cannons, thanks to the ability to build strong fortifications (requiring several hits to pierce)
+ - the possibility of implementing erosion over time, blocks damaged above a certain block limit, e.g. bricks in fortifications as well as "self-healing", e.g. sand blocks

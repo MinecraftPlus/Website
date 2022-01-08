@@ -1,6 +1,6 @@
 ---
 Title: Weight Update
-Description: Aktualizacja dodająca do gry mechanizm wagi przedmiotów
+Description: An update that adds an item weight mechanism to the game
 Author: Wituch
 Date:
 
@@ -18,4 +18,4 @@ Template: tmpl/updates/update-page
 # Weight Update
 -----
 
-Opis aktualizacji jest jeszcze niedostępny.
+The update description is not yet available.

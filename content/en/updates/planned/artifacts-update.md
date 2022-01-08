@@ -1,6 +1,6 @@
 ---
 Title: Artifacts Update
-Description: Aktualizacja dodająca do gry system ulepszania przedmiotów za pomocą artefaktów
+Description: An update that adds a system of upgrading items with artifacts to the game
 Author: Wituch
 Date:
 
@@ -18,4 +18,4 @@ Template: tmpl/updates/update-page
 # Artifacts Update
 -----
 
-Opis aktualizacji jest jeszcze niedostępny.
+The update description is not yet available.

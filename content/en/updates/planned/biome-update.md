@@ -1,6 +1,6 @@
 ---
 Title: Biome Update
-Description: Aktualizacja regulująca występowanie surowców, roślin oraz zwierząt na mapie w zależności od biomu
+Description: Update regulating the presence of resources, plants and animals on the map depending on the biome
 Author: Wituch
 Date:
 
@@ -11,28 +11,28 @@ Dependencies:
       desc: desc of dependency
       type: dependent
     - id: Character Update
-      desc: Poprzez wpływ biomu na obszarze w którym znajduje się postać gracza np. drastyczny spadek temperatury ciała w biomach zimnych, śnieżnych
+      desc: Through the influence of the biome in the area where the player's character is located, e.g. a drastic drop in body temperature in cold, snowy biomes
       type: extension
     - id: Food Update
-      desc: Poprzez lepszą regulację występowania roślin w różnych obszarach mapy, zależnie od biomu
+      desc: By better regulating the presence of plants in different areas of the map, depending on the biome
       type: extension
     - id: Animal Update
-      desc: Poprzez lepszą regulację występowania zwierząt w różnych obszarach mapy, zależnie od biomu
+      desc: By better regulating the presence of animals in different areas of the map, depending on the biome
       type: extension
 ---
 
-# Biome Update - różnicowanie obszarów mapy
+# Biome Update - differentiating map areas
 -----
 
-W oryginalnym wydaniu gry, zróżnicowanie między obszarami zależnie od biomu jaki na nich występuje jest zauważalne choćby w tak podstawowych przypadkach jakim jest piasek. Na biomie pustynnym znajdzie się go wszędzie w olbrzymich ilościach, a na biomie nizinnym, w niewielkich ilościach, głównie nieopodal zbiorników wodnych. Innym przykładem jest szmaragd, którego występowanie ogranicza się do biomów górskich.  
-W przypadku innych surowców jakim jest węgiel nie wygląda to już tak samo. Węgiel w grze jest najczęściej spotykanym złożem w grze i można go znaleźć praktycznie w każdym miejscu na mapie. Taka sytuacja powoduje niską wartość tego surowca, co niekoniecznie jest uzasadnione z punktu widzenia przydatności.
+In the original release of the game, the differentiation between areas depending on the biome that occurs on them is noticeable even in such basic cases as sand. In the desert biome it will be found everywhere in enormous amounts, and in the lowland biome in small amounts, mainly near bodies of water. Another example is the emerald, which is restricted to mountain biomes.
+In the case of other raw materials such as coal, it is not the same anymore. Coal in the game is the most common deposit in the game and can be found virtually anywhere on the map. Such a situation results in a low value of this raw material, which is not necessarily justified from the point of view of suitability.
 
-> Odpowiednie zróżnicowanie dostępności towarów zależnie od regionu mapy zwiększy znaczenie kontroli terytorialnej, co przekłada się na dostęp do odpowiednich towarów.
+> Appropriate differentiation of the availability of goods depending on the region of the map will increase the importance of territorial control, which translates into access to the appropriate goods.
 
-Sytuacja ma się podobnie w przypadku roślinności oraz zwierząt. Co prawda naturalne występowanie w wielu przypadkach jest ograniczane (np. bambus tylko przy zbiornikach wodnych, niedźwiedzie polarne tylko w biomach zimowych) ale nie ma ograniczeń jeśli chodzi o ich transport w inne miejsce. W każdym momencie możemy zebrać znaleziony bambus i zasadzić go w innym biomie. Tak samo z zwierzętami - po znalezieniu upragnionej parki krów, można je hodować na pustyni.
+The situation is similar in the case of vegetation and animals. It is true that the natural occurrence is limited in many cases (e.g. bamboo only near water reservoirs, polar bears only in winter biomes) but there are no restrictions when it comes to transporting them to another place. At any time, we can collect the bamboo we find and plant it in another biome. Same with animals - once you've found your desired cow park, you can raise them in the desert.
 
-Modyfikacja ma na celu regulację ww. wymienionych oraz innych przypadków. Regulacja ma polegać na przydzieleniu do biomów odpowiednich bloków surowców oraz stworzeń, dopasowaniu ich ilości (rzadkości występowania) oraz warunków występowania (np. zakresy wysokości w chunku dla bloków). W przypadku zwierząt regulacji ulegnie zdolność przeżycia w danym biomie (np. niedźwiedź polarny nie przeżyje na pustyni) lub funkcjonowania w danym biomie (np. krowa nie będzie rodzić młodych cieląt na pustyni).
+The modification is aimed at regulating the above-mentioned mentioned and other cases. The regulation is to consist in assigning appropriate blocks of resources and creatures to biomes, adjusting their quantity (rarity) and conditions of occurrence (e.g. chunk height ranges for blocks). In the case of animals, the ability to survive in a given biome will be regulated (e.g. a polar bear will not survive in the desert) or to function in a given biome (e.g. a cow will not give birth to young calves in the desert).
 
-# Zalety modyfikacji
- - zróżnicowanie terenów pod względem atrakcyjności i przydatności
- - kontrola terytorialna nabiera znaczenia w przypadku zabezpieczania źródeł surowców
+# Advantages of modification
+ - diversity of areas in terms of attractiveness and usefulness
+ - territorial control is gaining importance in securing the sources of raw materials

@@ -1,6 +1,6 @@
 ---
 Title: Zero Update
-Description: Coś co w końcu będzie działać
+Description: Something that will work now
 Author: Wituch
 Date: 28-3-2020
 EndDate: 1-6-2020
@@ -8,4 +8,4 @@ EndDate: 1-6-2020
 Progress: 100
 ---
 
-Zbudowanie pierwszego działającego wydania, pozbawionego jakichkolwiek zmian względem oryginalnej wersji gry i opartego na przygotowanym kodzie źródłowym. Ułatwi to testowanie poprawności działania „gołego” MC+, ponieważ będzie zachowywał się on dokładnie tak samo, jak oryginał.
+Building the first working release, devoid of any changes to the original version of the game and based on the prepared source code. This will make it easier to test the correct operation of the "bare" MC+, as it will behave exactly like the original.

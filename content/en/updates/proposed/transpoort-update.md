@@ -1,6 +1,6 @@
 ---
 Title: Transport Update
-Description: Aktualizacja dodająca do gry plecaki, wozy i jarzma pozwalajacych zaprzegac woły do pracy
+Description: An update that adds backpacks, carts and yokes to the game to keep oxen to work
 Author: Wituch
 Date:
 
@@ -18,4 +18,4 @@ Template: tmpl/updates/update-page
 # Transport Update
 -----
 
-Opis aktualizacji jest jeszcze niedostępny.
+The update description is not yet available.

@@ -8,4 +8,4 @@ EndDate: 1-4-2021
 Progress: 100
 ---
 
-Do silnika SpigotPlus dodane zostaną zmiany z MC+ v0.0.2 - zawierającej uzupełnioną aktualizację Cannon Update.
+The changes from MC+ v0.0.2 - including the updated Cannon Update - will be added to the SpigotPlus engine.

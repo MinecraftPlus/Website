@@ -1,25 +1,25 @@
 ---
-Title: Transformacja projektu do OpenSource
+Title: Project transformation to OpenSource
 Description:
 Author: Wituch
 Date: 20-12-2021
 
 Progress: 0
 Tasks:
-  - name: Przygotowanie skryptów automatyzujących
+  - name: Preparation of automation scripts
     status: wait
-  - name: Transformacja repozytorium silnika klienta i serwera MinecraftPlus
+  - name: MinecraftPlus client engine and server repository transformation
     status: wait
-  - name: Transformacja repozytorium silnika serwera CraftBukkitPlus
+  - name: CraftBukkitPlus server engine repository transformation
     status: wait
-  - name: Transformacja repozytorium silnika serwera SpigotPlus
+  - name: SpigotPlus Server Engine Repository transformation
     status: wait
-  - name: Przygotowanie dokumentacji, instrukcji, plików README
+  - name: Preparation of documentation, manuals, files README
     status: wait
-  - name: Umieszczenie projektów na GitHub
+  - name: Placing projects on GitHub
     status: wait
 ---
 
-Rozwijanie tak szeroko zakrojonego projektu jak MC+ wymaga ogromnych ilości czasu. Dotychczasowa forma projektu nie pozwala na jego udostępnienie publiczne w celu szerszej kolaboracji. Z tego powodu nikt nie może korzystać z oferowanych rozwiązań ani wspomóc rozwoju projektu.
+Developing a large-scale project like MC+ takes an enormous amount of time. The current form of the project does not allow it to be made available to the public for wider collaboration. For this reason, no one can use the solutions offered or support the development of the project.
 
-Po pełnej transformacji projektu, każdy jego element składowy zostanie opatrzony odpowiednimi instrukcjami obsługi, wytycznymi jak rozwijać projekt i będzie dostępny w repozytorium MinecraftPlus na GitHub.com.
+After the full transformation of the project, each of its components will be provided with appropriate manuals, guidelines on how to develop the project and will be available in the MinecraftPlus repository on GitHub.com.

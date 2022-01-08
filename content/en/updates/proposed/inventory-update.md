@@ -1,6 +1,6 @@
 ---
 Title: Inventory Update
-Description: Aktualizacja zmieniająca system ekwipunku
+Description: Update changing the inventory system
 Author: Wituch
 Date:
 
@@ -18,4 +18,4 @@ Template: tmpl/updates/update-page
 # Inventory Update
 -----
 
-Opis aktualizacji jest jeszcze niedostępny.
+The update description is not yet available.

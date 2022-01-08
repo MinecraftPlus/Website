@@ -1,6 +1,6 @@
 ---
 Title: Clothes Update
-Description: Aktualizacja dodająca do gry ubrania jako ozdobną część garderoby
+Description: An update that adds clothes to the game as a decorative piece of clothing
 Author: Wituch
 Date:
 
@@ -18,4 +18,4 @@ Template: tmpl/updates/update-page
 # Clothes Update
 -----
 
-Opis aktualizacji jest jeszcze niedostępny.
+The update description is not yet available.

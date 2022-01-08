@@ -1,6 +1,6 @@
 ---
 Title: Interactions Update
-Description: Aktualizacja zmieniajca sposób interakcji gracza z otoczeniem
+Description: An update that changes the way the player interacts with the environment
 Author: Wituch
 Date:
 
@@ -8,11 +8,11 @@ Template: tmpl/updates/update-page
 
 Dependencies:
     - id: Cannon Update
-      desc: Poprzez uproszczenie interakcji z obiektami w grze, zwiekszając wygodę korzystania z działa.
+      desc: By simplifying the interaction with objects in the game, increasing the comfort of using the gun.
       type: extension
 ---
 
 # Interactions Update
 -----
 
-Opis aktualizacji jest jeszcze niedostępny.
+The update description is not yet available.

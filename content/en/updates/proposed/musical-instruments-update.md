@@ -1,6 +1,6 @@
 ---
 Title: Musical Instruments Update
-Description: Aktualizacja dodająca do gry instrumenty muzyczne
+Description: An update that adds musical instruments to the game
 Author: Wituch
 Date:
 
@@ -18,4 +18,4 @@ Template: tmpl/updates/update-page
 # Musical Instruments Update
 -----
 
-Opis aktualizacji jest jeszcze niedostępny.
+The update description is not yet available.

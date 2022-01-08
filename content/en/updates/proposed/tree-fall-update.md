@@ -1,6 +1,6 @@
 ---
 Title: Tree fall Update
-Description: Aktualizacja dodająca do gry mechanizm pozwalający powalać drzewa
+Description: An update that adds a mechanism to the game that allows you to fell trees
 Author: Wituch
 Date:
 
@@ -18,4 +18,4 @@ Template: tmpl/updates/update-page
 # Tree fall Update
 -----
 
-Opis aktualizacji jest jeszcze niedostępny.
+The update description is not yet available.

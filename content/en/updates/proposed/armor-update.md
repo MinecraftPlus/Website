@@ -1,6 +1,6 @@
 ---
 Title: Armor Update
-Description: Aktualizacja zmieniąjąca system pancerza i dodająca do gry nowe zbroje
+Description: An update that changes the armor system and adds new armor to the game
 Author: Wituch
 Date:
 
@@ -18,4 +18,4 @@ Template: tmpl/updates/update-page
 # Armor Update
 -----
 
-Opis aktualizacji jest jeszcze niedostępny.
+The update description is not yet available.

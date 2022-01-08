@@ -1,6 +1,6 @@
 ---
 Title: Metalurgy & Mining Update
-Description: Aktualizacja rozwijająca górnictwo w grze przez dodanie nowych rud oraz sposobów przetapiania
+Description: An update that improves mining in the game by adding new ores and smelting methods
 Author: Wituch
 Date:
 
@@ -18,4 +18,4 @@ Template: tmpl/updates/update-page
 # Metalurgy & Mining Update
 -----
 
-Opis aktualizacji jest jeszcze niedostępny.
+The update description is not yet available.

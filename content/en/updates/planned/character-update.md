@@ -1,6 +1,6 @@
 ---
 Title: Character Update
-Description: Aktualizacja dodająca do gry system rozwoju statystyk postaci
+Description: An update that adds a character stat development system to the game
 Author: Wituch
 Date:
 
@@ -11,11 +11,11 @@ Template: tmpl/updates/update-page
       desc: desc of dependency
       type: dependent
     - id: Block Mechanics Update
-      desc: Poprzez statystyki postaci wpływ na zużycie narzędzi - posiadanie konkretnych umiejętności lub wysoka zręczność pozwoli je zmniejszać
+      desc: Influence on the consumption of tools through character statistics - having specific skills or high dexterity will reduce them
       type: extension
 ---
 
-# Character Update - statystyki postaci
+# Character Update - character stats
 -----
 
-Opis aktualizacji jest jeszcze niedostępny.
+The update description is not yet available.

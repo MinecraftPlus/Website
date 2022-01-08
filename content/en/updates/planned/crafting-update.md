@@ -1,6 +1,6 @@
 ---
 Title: Crafting Update
-Description: Aktualizacja zmieniająca system craftingu
+Description: Update changing the crafting system
 Author: Wituch
 Date:
 
@@ -18,4 +18,4 @@ Template: tmpl/updates/update-page
 # Crafting Update
 -----
 
-Opis aktualizacji jest jeszcze niedostępny.
+The update description is not yet available.

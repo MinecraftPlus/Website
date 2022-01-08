@@ -1,6 +1,6 @@
 ---
 Title: Food Update
-Description: Aktualizacja dodająca do gry nowe składniki i produkty spożywcze
+Description: An update that adds new ingredients and food items to the game
 Author: Wituch
 Date:
 
@@ -18,5 +18,5 @@ Template: tmpl/updates/update-page
 # Food Update
 -----
 
-Opis aktualizacji jest jeszcze niedostępny.
+The update description is not yet available.
 

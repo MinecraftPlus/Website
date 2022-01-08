@@ -1,6 +1,6 @@
 ---
 Title: Weapon Update
-Description: Aktualizacja dodająca do gry nowe bronie
+Description: An update that adds new weapons to the game
 Author: Wituch
 Date:
 
@@ -18,4 +18,4 @@ Template: tmpl/updates/update-page
 # Weapon Update
 -----
 
-Opis aktualizacji jest jeszcze niedostępny.
+The update description is not yet available.

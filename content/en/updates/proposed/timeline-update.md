@@ -1,6 +1,6 @@
 ---
 Title: Timeline Update
-Description: Aktualizacja dodająca do gry upływ czasu, którym mierzony jest wiek postaci, dorastanie i starzenie
+Description: An update that adds a lapse of time to the game, which measures a character's age, adolescence, and aging
 Author: Wituch
 Date:
 
@@ -18,6 +18,6 @@ Dependencies:
 # Timeline Update
 -----
 
-Opis aktualizacji jest jeszcze niedostępny.
+The update description is not yet available.
 
-<!--Dzieci mają ograniczone mozliwosci akcji w grze, jednak ze wzgledu na dluzszy okres zycia otrzymuja wiecej punktow rozwoju + dodatkowy bonus za wieksze zdolnosci do nauki-->
+<!--Children have limited options for action in the game, but due to the longer life span, they receive more development points + an additional bonus for greater learning abilities-->

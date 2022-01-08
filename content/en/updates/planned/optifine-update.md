@@ -1,6 +1,6 @@
 ---
 Title: Optifine Update
-Description: Aktualizacja dodająca kompatybilność klienta z Optifine
+Description: Update adding client compatibility with Optifine
 Author: Wituch
 Date: 2021-04-15
 
@@ -18,4 +18,4 @@ Template: tmpl/updates/update-page
 # Optifine Update
 -----
 
-Aktualizacja dodaje klientowi kompatybilności z modyfikacją Optifine dostępną na https://optifine.net/
+The update adds compatibility to the client with the Optifine modification available at https://optifine.net/

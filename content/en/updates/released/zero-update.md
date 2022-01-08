@@ -1,15 +1,15 @@
 ---
 Title: Zero Update
-Description: Pierwsza wersja MC+ oparta na kodzie źródłowym projektu
+Description: The first version of MC+ based on the project's source code
 Author: Wituch
 Date: 12-9-2020
 
 Template: tmpl/updates/update-page
 ---
 
-# Zero Update - pierwsze testy
+# Zero Update - first tests
 -----
 
-Jest to pierwsze wydanie wersji mające na celu przetestować poprawność działania klienta *MinecraftPlus*.
+This is the first release of the version to test the correct operation of the *MinecraftPlus* client.
 
-W tej aktualizacji do gry dodane NIE ZOSTAŁY dodane żadne zmiany względem oryginalnej wersji gry. Oznacza to pełną kompatybilność z serwerami `vanilla`.
+In this update, NO changes have been added to the game from the original version of the game. This means full compatibility with the `vanilla` servers.

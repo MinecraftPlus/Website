@@ -1,6 +1,6 @@
 ---
 Title: Tool Update
-Description: Aktualizacja dodająca do gry nowe narzędzia
+Description: An update that adds new tools to the game
 Author: Wituch
 Date:
 
@@ -18,4 +18,4 @@ Template: tmpl/updates/update-page
 # Tool Update
 -----
 
-Opis aktualizacji jest jeszcze niedostępny.
+The update description is not yet available.

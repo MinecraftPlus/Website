@@ -1,5 +1,5 @@
 ---
-Title: Integracja BukkitAPI w Zero Update
+Title: BukkitAPI integration in Zero Update
 Description:
 Author: Wituch
 Date: 5-6-2020
@@ -8,4 +8,4 @@ EndDate: 10-7-2020
 Progress: 100
 ---
 
-Ważnym krokiem, będzie zintegrowanie zmian pochodzących z projektu CraftBukkit z podstawową wersją MC+. Pozwoli to uzyskać działające wydanie, bez żadnych zmian względem oryginalnej wersji gry, z możliwością uruchamiania pluginów opartych o [API Bukkit](https://hub.spigotmc.org/stash/projects/SPIGOT/repos/bukkit).
+An important step will be to integrate the changes from the CraftBukkit project with the basic version of MC+. This will allow you to get a working release, without any changes to the original version of the game, with the ability to run plugins based on [Bukkit API](https://hub.spigotmc.org/stash/projects/SPIGOT/repos/bukkit).

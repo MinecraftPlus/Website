@@ -1,6 +1,6 @@
 ---
 Title: Cannon Update
-Description: Bum.
+Description: Boom.
 Author: Wituch
 Date: 30-07-2020
 EndDate: 29-10-2020
@@ -8,4 +8,4 @@ EndDate: 29-10-2020
 Progress: 100
 ---
 
-W celu zaprezentowania nieograniczonych możliwości projektu oraz zebrania feedbacku od społeczności i zbadania zainteresowania, w pierwszej kolejności zostanie udostępniona pokazowa modyfikacja Cannon Update, dodającą do gry działa i kule armatnie. Modyfikacja ma być rozwiązaniem na nieestetyczną realizację „dział” za pomocą TNT.
+In order to present the unlimited possibilities of the project, collect feedback from the community and test the interest, a demonstration modification of Cannon Update will be made available first, adding cannons and cannonballs to the game. The modification is supposed to be a solution to the unsightly realization of "cannons" by means of TNT.

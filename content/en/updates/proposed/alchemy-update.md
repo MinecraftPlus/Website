@@ -1,6 +1,6 @@
 ---
 Title: Alchemy Update
-Description: Aktualizacja dodająca do gry alchemię oraz medykamenty
+Description: An update that adds alchemy and medications to the game
 Author: Wituch
 Date:
 
@@ -18,4 +18,4 @@ Template: tmpl/updates/update-page
 # Alchemy Update
 -----
 
-Opis aktualizacji jest jeszcze niedostępny.
+The update description is not yet available.

@@ -1,6 +1,6 @@
 ---
 Title: Brewery Update
-Description: Aktualizacja dodająca do gry browarnictwo
+Description: An update that adds brewing to the game
 Author: Wituch
 Date:
 
@@ -18,4 +18,4 @@ Template: tmpl/updates/update-page
 # Brewery Update
 -----
 
-Opis aktualizacji jest jeszcze niedostępny.
+The update description is not yet available.

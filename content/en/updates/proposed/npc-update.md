@@ -1,6 +1,6 @@
 ---
 Title: NPC Update
-Description: Aktualizacja dodająca do gry nowe GUI NPC
+Description: Update adding new GUI NPCs to the game
 Author: Wituch
 Date:
 
@@ -18,5 +18,5 @@ Template: tmpl/updates/update-page
 # NPC Update
 -----
 
-Opis aktualizacji jest jeszcze niedostępny.
+The update description is not yet available.
 
