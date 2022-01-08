@@ -65,8 +65,9 @@ TOC:                                # Table Of Contents Plugin
 ##
 # MultiLanguage support
 #
-default_language: pl                # The default language.
+default_language: en                # The default language.
 languages:                          # The list of available languages and their display names.
+  en: English
   pl: Polski
 language_dir: language/             # The path to the language directory.
 date_formats:                       # The list of date formats by language.

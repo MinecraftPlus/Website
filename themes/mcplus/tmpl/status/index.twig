@@ -39,7 +39,7 @@
             {{ toc }}
             {{ content }}
 
-            <h1>Aktualnie realizowane zadania</h1>
+            <h1>{{ 'status.actual'|translate }}</h1>
             {% set pages = pages("#{current_language}/status/steps") %}
             {% if not pages is empty %}
                 {% for page in pages|sort_by("time")|reverse if not page.hidden %}
@@ -79,12 +79,12 @@
                 {% endfor %}
             {% else %}
                 <div class="post">
-                    <p>Brak aktualnych działań do wyświetlenia</p>
+                    <p>{{ 'status.actual.empty'|translate }}</p>
                 </div>
             {% endif %}
 
             <br/>
-            <h1>Wcześniejsze działania</h1>
+            <h1>{{ 'status.recent'|translate }}</h1>
             {% set pages = pages("#{current_language}/status/steps/done") %}
             {% if not pages is empty %}
                 {% for page in pages|sort_by("time")|reverse if not page.hidden %}
@@ -104,7 +104,7 @@
                 {% endfor %}
             {% else %}
                 <div class="post">
-                    <p>Brak wcześniejszych działań do wyświetlenia</p>
+                    <p>{{ 'status.recent.empty'|translate }}</p>
                 </div>
             {% endif %}
         </div>
