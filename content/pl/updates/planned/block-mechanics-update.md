@@ -8,7 +8,7 @@ Template: tmpl/updates/update-page
 
 Dependencies:
     - id: Character Update
-      desc: Poprzez wpływ statystk postaci (np. siły) na ilośc zadawanych "obrażen" - analogicznie silniejsza postać gracza uderza z większą siłą
+      desc: Poprzez wpływ statystyk postaci (np. siły) na ilośc zadawanych "obrażen" - analogicznie silniejsza postać gracza uderza z większą siłą
       type: dependent
     - id: Cannon Update
       desc: Poprzez możliwość kumulowania obrażeń zadawanych przez kule armatnie

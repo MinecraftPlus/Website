@@ -8,7 +8,7 @@ Template: tmpl/updates/update-page
 
 Dependencies:
     - id: Biome Update
-      desc: Poprzez deregulację rud na roznych biomach by różnicować mapę pod względem bogactwa (tutaj metali wartościowych)
+      desc: Poprzez deregulację rud na różnych biomach by różnicować mapę pod względem bogactwa (tutaj metali wartościowych)
       type: dependent
     - id: Crafting Update
       desc: Poprzez wprowadzenie do gry narzędzi wspomagających craftowanie (tutaj stempli pozwalających określać wzór awersu)
