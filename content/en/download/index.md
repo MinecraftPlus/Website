@@ -23,7 +23,7 @@ th, td {
 
 Each version of MinecraftPlus works just like the original Minecraft. To run the game you need a Minecraft launcher (any one that supports original `.json` configuration files).
 
-# Downloading the MC + client
+# Downloading the MC+ client
 
 To run the game client in the MiecraftPlus edition, you need to download the appropriate version configuration from the list below and then install it.
 In case of a download problem, click on the RMB link and select "Save link as...".
@@ -55,18 +55,18 @@ In case of a download problem, click on the RMB link and select "Save link as...
         <td> 0.0.0 </td>
         <td> <a download href="%assets_url%/downloads/minecraft/minecraftplus-0.0.0.json"> download </a> </td>
       </tr>
-      <tr> <td colspan = "4"> * version of the original version of the game whose content is present in the given version of MC + </td> </tr>
+      <tr> <td colspan = "4"> * version of the original version of the game whose content is present in the given version of MC+ </td> </tr>
     </tbody>
 </table>
 
 If you encounter a bug in MinecraftPlus, have ideas to improve or add new functionality, please report it to <a href="https://bitbucket.org/minecraftplus/minecraftplus/issues" target="_blank"> this link. </a>
 
-# MC + client installation
+# MC+ client installation
 
 The downloaded configuration file for the `minecraftplus-x.x.x.json` version (or for the transitional versions` minecraftplus-x.x.x-SNAPSHOT.json`) should be placed in a folder with the same name as the file, without the `.json` extension.
 The folder with the configuration file contained in it should be moved to the versions folder `.minecraft/versions/` (most often it is `%appdata%/.minecraft/versions/`) used by the used Minecraft launcher.
 
-# Starting the MC + client
+# Starting the MC+ client
 
 To run the game in the MinecraftPlus version, add a new version in the game launcher. To do this, you need to configure a new installation that will use the downloaded configuration of the game version.
 Pay attention to the type of downloaded configuration - if the name contains the word `SNAPSHOT`, it is a transitional release and you should unlock the use of transitional versions in the launcher.
@@ -89,7 +89,7 @@ In case of a download problem, click on the RMB link and select "Save link as...
     </colgroup>
     <thead>
         <tr> <th rowspan = "2"> Version </th> <th colspan = "4"> Compatibility </th> <th rowspan = "2"> Link </th> </tr>
-        <tr> <th> Release </th> <th> MC + </th> <th> API </th> <th> Plugins * </th> </tr>
+        <tr> <th> Release </th> <th> MC+ </th> <th> API </th> <th> Plugins * </th> </tr>
     </thead>
     <tbody>
       <tr>

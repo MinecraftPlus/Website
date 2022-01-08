@@ -20,4 +20,9 @@ return array( // {{ 'my_key'|translate }}
     "update-page.dependent" => "Zależna od",
     "update-page.extension" => "Uzupełniająca dla",
 
+    "status.actual" => "Aktualnie realizowane zadania",
+    "status.actual.empty" => "Brak aktualnych działań do wyświetlenia",
+    "status.recent" => "Wcześniejsze działania",
+    "status.recent.empty" => "Brak wcześniejszych działań do wyświetlenia",
+
 );
