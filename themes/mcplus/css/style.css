@@ -14,6 +14,10 @@
  * @version 2.1
  */
 
+:root {
+    color-scheme: light dark; /* both modes supported */
+}
+
 * {
     box-sizing: border-box;
     border: 0 none;
@@ -121,7 +125,7 @@ body { display: flex; flex-direction: column; }
     font-weight: bold;
 }
 
-#nav a, #nav-toggle { color: #7ea7bf; }
+#nav a, #nav-toggle { color: #8ebdd8; }
 #nav .active a, #nav a:hover, #nav-toggle:hover {
     color: #fff;
 }
@@ -185,7 +189,7 @@ body { display: flex; flex-direction: column; }
     color: #bebebe;
 }
 
-#footer a { color: #2EAE9B; }
+#footer a { color: #36cbb5; }
 #footer a:hover { color: #fff; }
 
 #footer p {
@@ -286,7 +290,7 @@ p.desc {
 }
 
 a {
-    color: #2EAE9B;
+    color: #176357;
     text-decoration: none;
     -webkit-transition: color .2s ease-in;
             transition: color .2s ease-in;
@@ -474,4 +478,65 @@ fieldset select:last-child, fieldset textarea:last-child {
 input::-moz-focus-inner, button::-moz-focus-inner {
     border: 0;
     padding: 0;
+}
+
+/*** DARK MODE ***/
+
+@media (prefers-color-scheme: dark) {
+    body {
+        background: #35363a;
+        color: #c6d2d9;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+        color: #d1d2d9;
+    }
+
+    img {
+        filter: brightness(.85) contrast(1.15);
+    }
+
+    a {
+        color: #4fecd4;
+    }
+
+    hr {
+        border-color: #585858;
+    }
+
+    #nav a {
+        color: #92bed7;
+    }
+
+    #toc a {
+        color: #9de4e8;
+    }
+
+    #footer a {
+        color: #52f3db;
+    }
+    a:hover { color: #DDD; }
+
+    p.desc {
+        color: #c2c8c5;
+    }
+
+    code {
+        border-color: #6d6c6c;
+        background: #4a4a4a;
+        color: #dbe8f0;
+    }
+
+    pre {
+        border-color: #ccc;
+        background: #f5f5f5;
+    }
+    pre code {
+        background: transparent;
+    }
+
+    th {
+        background: #2a2a2a;
+        color: #c8cdd0;
+    }
 }

@@ -45,6 +45,14 @@
                 font-size: .85rem;
             }
         }
+
+        /*** DARK MODE ***/
+
+        @media (prefers-color-scheme: dark) {
+            div.desc {
+                color: #9ba19e;
+            }
+        }
     </style>
 </head>
 <body{% if config.theme_config.widescreen %} class="widescreen"{% endif %}>
