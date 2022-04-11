@@ -7,7 +7,7 @@ Date: 20-12-2021
 Progress: 0
 Tasks:
   - name: Preparation of automation scripts
-    status: wait
+    status: done
   - name: MinecraftPlus client engine and server repository transformation
     status: wait
   - name: CraftBukkitPlus server engine repository transformation

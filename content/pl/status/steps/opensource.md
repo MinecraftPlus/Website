@@ -7,7 +7,7 @@ Date: 20-12-2021
 Progress: 0
 Tasks:
   - name: Przygotowanie skryptów automatyzujących
-    status: wait
+    status: done
   - name: Transformacja repozytorium silnika klienta i serwera MinecraftPlus
     status: wait
   - name: Transformacja repozytorium silnika serwera CraftBukkitPlus
