@@ -480,6 +480,37 @@ input::-moz-focus-inner, button::-moz-focus-inner {
     padding: 0;
 }
 
+/*** GITHUB CORNER ***/
+
+.github-corner .svg {
+    height: 6em;
+}
+
+.github-corner:hover .octo-arm {
+    animation: octocat-wave 560ms ease-in-out
+}
+
+@keyframes octocat-wave {
+    0%,
+    100% {
+        transform: rotate(0)
+    }
+    20%,
+    60% {
+        transform: rotate(-25deg)
+    }
+    40%,
+    80% {
+        transform: rotate(10deg)
+    }
+}
+
+@media (max-width: 1000px) {
+    .github-corner {
+        display: none
+    }
+}
+
 /*** DARK MODE ***/
 
 @media (prefers-color-scheme: dark) {
