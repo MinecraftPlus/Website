@@ -9,7 +9,7 @@ Tasks:
   - name: Przygotowanie skryptów automatyzujących
     status: done
   - name: Transformacja repozytorium silnika klienta i serwera MinecraftPlus
-    status: wait
+    status: done
   - name: Transformacja repozytorium silnika serwera CraftBukkitPlus
     status: wait
   - name: Transformacja repozytorium silnika serwera SpigotPlus

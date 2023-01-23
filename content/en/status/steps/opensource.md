@@ -8,8 +8,8 @@ Progress: 0
 Tasks:
   - name: Preparation of automation scripts
     status: done
-  - name: MinecraftPlus client engine and server repository transformation
-    status: wait
+  - name: MinecraftPlus client and server engine repository transformation
+    status: done
   - name: CraftBukkitPlus server engine repository transformation
     status: wait
   - name: SpigotPlus Server Engine Repository transformation
