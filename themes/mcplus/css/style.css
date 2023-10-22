@@ -335,7 +335,7 @@ abbr { text-decoration: underline dotted; }
 .image.float-right { float: right; margin: 1em 0 1em 2em; }
 .image img { display: block; width: 100%; }
 
-@media (max-width: 767px) {
+@media (max-width: 765px) {
     .image.xsmall { width: 60%; }
     .image.small { width: 80%; }
     .image.large, .image.xlarge { width: 100%; }
