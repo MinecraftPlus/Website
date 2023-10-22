@@ -18,9 +18,9 @@ jobs:
         id: meta
         uses: docker/metadata-action@v4
         with:
-          images: name/app
+          images: minecraftplus/website
           tags: |
-            type=raw,value={{date 'YYYYMMDD'}}
+            type=raw,value={{date 'YYYYMMDD-HHmmss'}}
       -
         name: Login to DockerHub
         if: github.event_name != 'pull_request'
