@@ -9,14 +9,17 @@ RUN apt-get update && apt-get install -y \
 # Enable the Apache rewritemod module
 RUN a2enmod rewrite
 
-# Copy project files to the /var/www/html directory
-COPY . /var/www/html
-
 # Install Composer
 RUN curl -sS https://getcomposer.org/installer | php -- --version=2.1.14 --install-dir=/usr/local/bin --filename=composer
 
+# Copy composer file to the /var/www/html directory
+COPY composer.json /var/www/html/
+
 # Install Composer dependencies
 RUN composer install
+
+# Copy project files to the /var/www/html directory
+COPY . /var/www/html
 
 # Ensure that the owner of files in the /var/www/html directory is www-data
 RUN chown -R www-data:www-data /var/www/html
