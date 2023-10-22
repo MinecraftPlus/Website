@@ -20,6 +20,7 @@ jobs:
         with:
           images: minecraftplus/website
           tags: |
+            type=raw,value=latest,enable={{is_default_branch}}
             type=raw,value={{date 'YYYYMMDD-HHmmss'}}
       -
         name: Login to DockerHub
