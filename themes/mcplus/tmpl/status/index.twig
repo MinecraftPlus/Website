@@ -39,9 +39,10 @@
             {{ toc }}
             {{ content }}
 
-            <h1>Aktualnie realizowane zadania</h1>
-            {% if not pages("status/steps") is empty %}
-                {% for page in pages("status/steps")|sort_by("time")|reverse if not page.hidden %}
+            <h1>{{ 'status.actual'|translate }}</h1>
+            {% set pages = pages("#{current_language}/status/steps") %}
+            {% if not pages is empty %}
+                {% for page in pages|sort_by("time")|reverse if not page.hidden %}
                     <div class="post">
                         <div style="display: flow-root">
                             <h3 style="float:left;">{{ page.title }}</h3>
@@ -52,7 +53,7 @@
                                 {% if not page.meta.Progress is empty %}
                                     {% set progress = page.meta.Progress %}
                                 {% endif %}
-								{% if not page.meta.Tasks is empty %}
+                                {% if not page.meta.Tasks is empty %}
                                     {% set progress = page.meta.Tasks|filter(t => t.status == 'done')|length / page.meta.Tasks|length * 100 %}
                                 {% endif %}
 
@@ -78,14 +79,15 @@
                 {% endfor %}
             {% else %}
                 <div class="post">
-                    <p>Brak aktualnych działań do wyświetlenia</p>
+                    <p>{{ 'status.actual.empty'|translate }}</p>
                 </div>
             {% endif %}
 
             <br/>
-            <h1>Wcześniejsze działania</h1>
-            {% if not pages("status/steps/done") is empty %}
-                {% for page in pages("status/steps/done")|sort_by("time")|reverse if not page.hidden %}
+            <h1>{{ 'status.recent'|translate }}</h1>
+            {% set pages = pages("#{current_language}/status/steps/done") %}
+            {% if not pages is empty %}
+                {% for page in pages|sort_by("time")|reverse if not page.hidden %}
                     <div class="post">
                         <div style="display: flow-root">
                             <h3 class="not-in-toc" style="float:left;">{{ page.title }}</h3>
@@ -102,7 +104,7 @@
                 {% endfor %}
             {% else %}
                 <div class="post">
-                    <p>Brak wcześniejszych działań do wyświetlenia</p>
+                    <p>{{ 'status.recent.empty'|translate }}</p>
                 </div>
             {% endif %}
         </div>

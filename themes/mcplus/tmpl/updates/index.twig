@@ -45,6 +45,14 @@
                 font-size: .85rem;
             }
         }
+
+        /*** DARK MODE ***/
+
+        @media (prefers-color-scheme: dark) {
+            div.desc {
+                color: #9ba19e;
+            }
+        }
     </style>
 </head>
 <body{% if config.theme_config.widescreen %} class="widescreen"{% endif %}>
@@ -56,11 +64,11 @@
             {{ toc }}
             {{ content }}
 
-            <h1>Aktualizacje wydane</h1>
-            <p>Lista aktualizacji wydanych, zawiera te które zostały już zaimplementowane do MC+ i są dostępne do pobrania. Wyświetlane w kolejności od najnowszej do najstarszej.</p>
+            <h1>{{ 'updates.released'|translate }}</h1>
+            <p>{{ 'updates.released.desc'|translate }}</p>
 
             <div id="updates-released" class="list">
-            {% set pages = pages("updates/released") %}
+            {% set pages = pages("#{current_language}/updates/released") %}
             {% if not pages is empty %}
                 {% for page in pages|sort_by("time")|reverse if not page.hidden %}
                     <div class="update released">
@@ -78,16 +86,16 @@
                 {% endfor %}
             {% else %}
                 <div>
-                    <p>Brak aktualizacji do wyświetlenia</p>
+                    <p>{{ 'updates.empty'|translate }}</p>
                 </div>
             {% endif %}
             </div>
 
-            <h1>Aktualizacje zaplanowane</h1>
-            <p>Zaplanowane aktualizacje znajdujące się na liście zostaną w najbliższym czasie zaimplementowane do MC+. Planowane aktualizacje nie mają określonych konkretnych ram czasowych, dlatego na liście posortowane są alfabetycznie.</p>
+            <h1>{{ 'updates.planned'|translate }}</h1>
+            <p>{{ 'updates.planned.desc'|translate }}</p>
 
             <div id="updates-planned" class="list responsive-list">
-            {% set pages = pages("updates/planned") %}
+            {% set pages = pages("#{current_language}/updates/planned") %}
             {% if not pages is empty %}
                 {% for page in pages|sort_by("title") if not page.hidden %}
                     <div class="update">
@@ -101,16 +109,16 @@
                 {% endfor %}
             {% else %}
                 <div>
-                    <p>Brak aktualizacji do wyświetlenia</p>
+                    <p>{{ 'updates.empty'|translate }}</p>
                 </div>
             {% endif %}
             </div>
 
-            <h1>Aktualizacje proponowane</h1>
-            <p>Poniżej znajduje się lista aktualizacji, które mogą zostać zaimplementowane do MC+ ale nie muszą. Proponowane aktualizacje są podparte ogólną koncepcją i relacjami z wydanymi lub zaplanowanymi aktualizacjami.</i></p>
+            <h1>{{ 'updates.proposed'|translate }}</h1>
+            <p>{{ 'updates.proposed.desc'|translate }}</p>
 
             <div id="updates-proposed" class="list responsive-list">
-            {% set pages = pages("updates/proposed") %}
+            {% set pages = pages("#{current_language}/updates/proposed") %}
             {% if not pages is empty %}
                 {% for page in pages|sort_by("title") if not page.hidden %}
                     <div class="update">
@@ -124,7 +132,7 @@
                 {% endfor %}
             {% else %}
                 <div class="post">
-                    <p>Brak aktualizacji do wyświetlenia</p>
+                    <p>{{ 'updates.empty'|translate }}</p>
                 </div>
             {% endif %}
             </div>

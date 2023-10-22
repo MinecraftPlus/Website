@@ -1,17 +1,16 @@
 <div id="footer">
     <div class="container">
         <div class="inner align-center">
-            <h1>Zainteresowany?</h1>
+            <h1>{{ 'fotter.interested'|translate }}</h1>
             <p class="description align-center">
-                Odwiedź nasz <a href="https://discord.gg/qdRMt2m">serwer Discord!</a><br>
-                Zajrzyj również na nasz <a href="https://github.com/MinecraftPlus">GitHub</a>.
+                {{ 'fotter.discord'|translate }} <a href="https://discord.gg/qdRMt2m">Discord</a>!<br>
+                {{ 'fotter.github'|translate }} <a href="https://github.com/MinecraftPlus">GitHub</a>.
             </p>
         </div>
-        <div class="social">
-            {% for social in pages["_meta"].meta.social %}
-                <a href="{{ social.url }}" title="{{ social.title }}" role="button">
-                    <span class="icon-{{ social.icon }}" aria-hidden="true"></span>
-                    <span class="sr-only">{{ social.title }}</span>
+        <div id="lang">
+            {% for language, display_name in languages %}
+                <a href="{{ language|link }}/{{ meta["pid"] }}">
+                    <img class="flag-icon {% if language == current_language %}active{% endif %}" src="{{ theme_url }}/img/flags/{{language}}.png">
                 </a>
             {% endfor %}
         </div>
