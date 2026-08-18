@@ -21,10 +21,20 @@ if (!extension_loaded('mbstring')) {
     die("Pico requires the PHP extension 'mbstring' to run");
 }
 
-// If we're behind a proxy server and using HTTPS, we need to alert Wordpress of that fact
-// see also http://codex.wordpress.org/Administration_Over_SSL#Using_a_Reverse_Proxy
-if (isset($_SERVER['HTTP_X_FORWARDED_PROTO']) && $_SERVER['HTTP_X_FORWARDED_PROTO'] === 'https') {
-	$_SERVER['HTTPS'] = 'on';
+// Normalize the public protocol and port reported by a trusted reverse proxy.
+// Pico otherwise combines X-Forwarded-Proto with Apache's internal port.
+if (!empty($_SERVER['HTTP_X_FORWARDED_PROTO'])) {
+    $forwardedProtocols = explode(',', $_SERVER['HTTP_X_FORWARDED_PROTO']);
+    $forwardedProtocol = strtolower(trim($forwardedProtocols[0]));
+    $isForwardedHttps = in_array($forwardedProtocol, array('https', 'on', 'ssl', '1'), true);
+
+    if ($isForwardedHttps) {
+        $_SERVER['HTTPS'] = 'on';
+    }
+
+    if (empty($_SERVER['HTTP_X_FORWARDED_PORT'])) {
+        $_SERVER['HTTP_X_FORWARDED_PORT'] = $isForwardedHttps ? '443' : '80';
+    }
 }
 
 // load dependencies
