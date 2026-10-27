@@ -11,8 +11,8 @@
  */
 
 // check PHP platform requirements
-if (PHP_VERSION_ID < 50306) {
-    die('Pico requires PHP 5.3.6 or above to run');
+if (PHP_VERSION_ID < 80500) {
+    die('This website requires PHP 8.5 or above to run');
 }
 if (!extension_loaded('dom')) {
     die("Pico requires the PHP extension 'dom' to run");
@@ -22,7 +22,7 @@ if (!extension_loaded('mbstring')) {
 }
 
 // Normalize the public protocol and port reported by a trusted reverse proxy.
-// Pico otherwise combines X-Forwarded-Proto with Apache's internal port.
+// Pico otherwise combines X-Forwarded-Proto with the web server's internal port.
 if (!empty($_SERVER['HTTP_X_FORWARDED_PROTO'])) {
     $forwardedProtocols = explode(',', $_SERVER['HTTP_X_FORWARDED_PROTO']);
     $forwardedProtocol = strtolower(trim($forwardedProtocols[0]));

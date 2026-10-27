@@ -1,31 +1,50 @@
-# Use the official PHP Apache base image
-FROM php:7.4-apache
+FROM composer:2@sha256:b6dcd72ca98fa19d0e5b8476de179859704891fad06dd9e0b96833d4c430a5fc AS composer
 
-# Update the package list and install system tools
-RUN apt-get update && apt-get install -y \
-    unzip \
-    libzip-dev
+FROM php:8.5-fpm-bookworm@sha256:d3db5340c7ecfb1e3a26af5d3d9de8b4e160cdd75692a830b5cb74b0b85db2cf AS base
 
-# Enable the Apache rewritemod module
-RUN a2enmod rewrite
+FROM base AS dependencies
 
-# Install Composer
-RUN curl -sS https://getcomposer.org/installer | php -- --version=2.1.14 --install-dir=/usr/local/bin --filename=composer
+RUN apt-get update \
+    && apt-get install -y --no-install-recommends unzip \
+    && rm -rf /var/lib/apt/lists/*
 
-# Copy composer file to the /var/www/html directory
-COPY composer.json /var/www/html/
+COPY --from=composer /usr/bin/composer /usr/local/bin/composer
+ENV COMPOSER_ALLOW_SUPERUSER=1
 
-# Install Composer dependencies
-RUN composer install
+WORKDIR /var/www/html
+COPY composer.json composer.lock ./
+RUN composer install --no-dev --prefer-dist --no-interaction --no-progress \
+    && composer check-platform-reqs --no-dev
 
-# Copy project files to the /var/www/html directory
-COPY . /var/www/html
+FROM base AS runtime
 
-# Ensure that the owner of files in the /var/www/html directory is www-data
-RUN chown -R www-data:www-data /var/www/html
+RUN apt-get update \
+    && apt-get install -y --no-install-recommends nginx-light tini \
+    && rm -rf /var/lib/apt/lists/* \
+    && rm /etc/nginx/sites-enabled/default
 
-# Port on which Apache will run
+WORKDIR /var/www/html
+COPY --from=dependencies /var/www/html/ ./
+# Repository plugins intentionally override the versions installed by Composer.
+COPY plugins/ ./plugins/
+COPY themes/ ./themes/
+COPY config/ ./config/
+COPY content/ ./content/
+COPY language/ ./language/
+COPY assets/ ./assets/
+COPY index.php favicon.ico ./
+
+COPY docker/nginx.conf /etc/nginx/sites-enabled/website.conf
+COPY docker/php-fpm.conf /usr/local/etc/php-fpm.d/zz-website.conf
+COPY docker/php.ini /usr/local/etc/php/conf.d/website.ini
+COPY docker/start.sh docker/healthcheck.sh /usr/local/bin/
+RUN chmod +x /usr/local/bin/start.sh /usr/local/bin/healthcheck.sh \
+    && php -r 'exit(extension_loaded("dom") && extension_loaded("mbstring") ? 0 : 1);' \
+    && nginx -t \
+    && php-fpm -t
+
 EXPOSE 80
-
-# Start command
-CMD ["apache2-foreground"]
+HEALTHCHECK --interval=30s --timeout=5s --start-period=20s --retries=3 CMD ["/usr/local/bin/healthcheck.sh"]
+STOPSIGNAL SIGTERM
+ENTRYPOINT ["/usr/bin/tini", "--"]
+CMD ["/usr/local/bin/start.sh"]

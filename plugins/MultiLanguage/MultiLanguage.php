@@ -374,7 +374,7 @@ class MultiLanguage extends AbstractPicoPlugin
      */
     private function getBrowserLanguage()
     {
-        $browser_language = substr($_SERVER['HTTP_ACCEPT_LANGUAGE'], 0, 2);
+        $browser_language = substr($_SERVER['HTTP_ACCEPT_LANGUAGE'] ?? '', 0, 2);
         return in_array($browser_language, $this->available_languages) ? $browser_language : $this->default_language;
     }
 
