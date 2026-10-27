@@ -25,6 +25,20 @@ jobs:
             type=raw,value=latest,enable={{is_default_branch}}
             type=raw,value={{date 'YYYYMMDD-HHmmss'}}
       -
+        name: Build candidate
+        uses: docker/build-push-action@v3
+        with:
+          context: .
+          load: true
+          push: false
+          tags: |
+            ${{ steps.meta.outputs.tags }}
+            minecraftplus/website:ci
+          labels: ${{ steps.meta.outputs.labels }}
+      -
+        name: Test candidate
+        run: python3 -u tests/container_test.py minecraftplus/website:ci
+      -
         name: Login to DockerHub
         if: github.event_name == 'push' && github.ref == 'refs/heads/master'
         uses: docker/login-action@v2
