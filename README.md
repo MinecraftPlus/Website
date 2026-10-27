@@ -133,9 +133,17 @@ the installed package versions.
 
 This change upgrades PHP and Composer while preserving Pico 2.1 and the existing
 theme/plugin APIs. Pico, Twig 1, Symfony YAML 2 and the old Composer installer
-still emit deprecation messages under PHP 8.5. Deprecation reporting has not been
-disabled to hide them. The container tests fail on PHP warnings, notices, parse
-errors and fatal errors; deprecations remain a documented follow-up.
+still use APIs deprecated in PHP 8.5. To prevent production log flooding on every
+page and health check, the runtime uses
+`error_reporting = E_ALL & ~E_DEPRECATED & ~E_USER_DEPRECATED`. Warnings, notices,
+parse errors and fatal errors are still logged; errors are not displayed in
+HTTP responses. The container tests reject deprecation spam and exercise the
+FPM logging path to verify that warnings, notices and uncaught errors remain
+visible. This logging policy does not fix the deprecated code itself.
+
+For development diagnostics, mount a PHP configuration file containing
+`error_reporting = E_ALL` at `/usr/local/etc/php/conf.d/zz-debug.ini` and recreate
+the container. Composer's build stage retains its own diagnostic settings.
 
 An audit during the PHP upgrade reported 18 existing security advisories affecting
 Twig and Symfony YAML. This runtime upgrade does not remediate those dependency
