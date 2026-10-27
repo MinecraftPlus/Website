@@ -233,8 +233,51 @@ def runtime_checks(container):
     version = docker("exec", container.id, "php", "-r", "echo PHP_VERSION;")
     require(version.startswith("8.5."), f"Expected PHP 8.5, got {version}")
     logs = docker("logs", container.id)
-    for marker in ("PHP Fatal error:", "PHP Parse error:", "PHP Warning:", "PHP Notice:"):
+    for marker in ("PHP Fatal error:", "PHP Parse error:", "PHP Warning:", "PHP Notice:", "PHP Deprecated:"):
         require(marker not in logs, f"Runtime diagnostic found: {marker}\n{logs[-6000:]}")
+
+
+def logging_checks(image):
+    # Exercise the real FPM logging path in a disposable container. Replacing
+    # the front controller here does not modify the image or repository files.
+    with running(image) as container:
+        def request_probe(expected_status, expected_body):
+            # FPM's OPcache may briefly keep the previous front controller.
+            deadline = time.monotonic() + 6
+            while True:
+                status, _, body = container.request("/index.php")
+                if status == expected_status and body == expected_body:
+                    return
+                require(time.monotonic() < deadline,
+                        "Logging probe did not execute or diagnostics leaked into its HTTP response")
+                time.sleep(0.1)
+
+        probe = """<?php
+utf8_encode('probe');
+trigger_error('website-deprecation-probe', E_USER_DEPRECATED);
+trigger_error('website-warning-probe', E_USER_WARNING);
+trigger_error('website-notice-probe', E_USER_NOTICE);
+echo 'log-probe-ok';
+"""
+        docker("exec", "-i", container.id, "tee", "/var/www/html/index.php", input=probe)
+        request_probe(200, b"log-probe-ok")
+        deadline = time.monotonic() + 5
+        while True:
+            logs = docker("logs", container.id)
+            if "website-warning-probe" in logs and "website-notice-probe" in logs:
+                break
+            require(time.monotonic() < deadline, "PHP warnings/notices are no longer logged")
+            time.sleep(0.1)
+        require("website-deprecation-probe" not in logs and "PHP Deprecated:" not in logs,
+                "Production FPM logs contain deprecation spam")
+        docker("exec", "-i", container.id, "tee", "/var/www/html/index.php",
+               input="<?php throw new RuntimeException('website-fatal-probe');")
+        request_probe(500, b"")
+        deadline = time.monotonic() + 5
+        while "website-fatal-probe" not in docker("logs", container.id):
+            require(time.monotonic() < deadline, "Uncaught PHP errors are no longer logged")
+            time.sleep(0.1)
+    print("PASS: production logging suppresses deprecations and retains warnings, notices and errors")
 
 
 def lifecycle_checks(image):
@@ -266,6 +309,7 @@ def main():
         ):
             check()
             print(f"PASS: {name}", flush=True)
+    logging_checks(args.image)
     lifecycle_checks(args.image)
 
 
