@@ -6,7 +6,9 @@ backend.
 
 ## Build and run
 
-Requires Docker with Linux containers. Build from the repository root:
+Requires Docker with Linux containers. The image runs PHP 8.5.12 on Debian
+Bookworm; running the application outside Docker requires PHP 8.5 or newer
+(within PHP 8.x). Build from the repository root:
 
 ```sh
 docker build -t mcplus-website:local .
@@ -23,7 +25,7 @@ still list that unused external port in image metadata.
 
 `composer.lock` preserves the dependencies extracted from the previous Apache
 image, `minecraftplus/website@sha256:ad08f5461d974438eb6ae4c79b712090f45bdb06614fae5240dab10c18b702f8`.
-The build uses Composer 2.1.14, installs locked dependencies first, and then
+The build uses Composer 2.10.3, installs locked dependencies first, and then
 overlays the repository's modified plugins and theme. Keep that order when
 editing the Dockerfile. PHP `dom` and `mbstring` are checked during the build.
 No dependencies are installed at container startup.
@@ -67,7 +69,11 @@ them afterwards. It checks page rendering, language redirects, legacy URLs,
 query strings, canonical/alternate links behind HTTPS proxies (including a custom
 port), 404s, static-file bytes and MIME types, video range requests, protection of
 internal files and arbitrary PHP scripts, plugin overrides, application health,
-process failure handling and graceful shutdown.
+process failure handling and graceful shutdown. It also verifies PHP 8.5,
+checks logs for runtime warnings/errors and preserves the existing Polish
+heading anchors. The table-of-contents plugin explicitly uses the old `C`
+transliteration locale while generating anchors, restoring the original locale
+afterwards; PHP 8's default `C.UTF-8` would otherwise change public fragment URLs.
 
 To compare HTML responses with an Apache reference built from the same application
 source and lock file:
@@ -78,7 +84,10 @@ python tests/container_test.py mcplus-website:local --reference mcplus-website:a
 
 The migration was compared against a local Apache reference created by overlaying
 the pre-migration working tree on the previous image above. An unrelated or older
-application revision is unsuitable for byte-for-byte comparisons.
+application revision is unsuitable for byte-for-byte comparisons. For the PHP
+upgrade, the previous nginx/PHP 7.4 image was retained locally as
+`mcplus-website:php74-reference` and used with the same `--reference` option;
+rendered page responses remain identical.
 
 GitHub Actions builds and loads a candidate image, runs the suite, and publishes
 the **same image** only after tests pass on a push to `master`. Pull requests only
@@ -114,8 +123,25 @@ it from its saved image digest and original settings. No database or content
 migration is involved. Use an immutable digest for rollback: a mutable tag
 such as `latest` can refer to nginx after publication.
 
-PHP remains 7.4.33 to isolate the server migration. Its base image is pinned by
-digest. Bullseye security packages now come from Debian's official archive;
-archive metadata expiry is disabled for that source only, while signature
-verification remains enabled. PHP 7.4 is unsupported: upgrading PHP, Pico/Twig
-compatibility and the old Composer installer is a separate follow-up.
+The PHP and Composer images are pinned by digest. Bookworm uses its normal signed
+package repositories; the former Bullseye archive configuration has been removed.
+`composer.json` declares PHP `^8.5` and explicitly permits the Pico installer
+plugin. The lock file's platform metadata has been refreshed without changing
+the installed package versions.
+
+## Legacy CMS dependencies
+
+This change upgrades PHP and Composer while preserving Pico 2.1 and the existing
+theme/plugin APIs. Pico, Twig 1, Symfony YAML 2 and the old Composer installer
+still emit deprecation messages under PHP 8.5. Deprecation reporting has not been
+disabled to hide them. The container tests fail on PHP warnings, notices, parse
+errors and fatal errors; deprecations remain a documented follow-up.
+
+An audit during the PHP upgrade reported 18 existing security advisories affecting
+Twig and Symfony YAML. This runtime upgrade does not remediate those dependency
+advisories. Updating the CMS and its dependency APIs is a separate migration.
+To inspect the current report without changing project files:
+
+```sh
+docker run --rm -v "${PWD}:/app:ro" -w /app composer:2 audit --locked --no-plugins
+```

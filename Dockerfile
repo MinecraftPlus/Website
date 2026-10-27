@@ -1,8 +1,6 @@
-# Keep PHP unchanged while migrating the web server; upgrade it separately.
-FROM php:7.4-fpm-bullseye@sha256:3ac7c8c74b2b047c7cb273469d74fc0d59b857aa44043e6ea6a0084372811d5b AS base
+FROM composer:2@sha256:b6dcd72ca98fa19d0e5b8476de179859704891fad06dd9e0b96833d4c430a5fc AS composer
 
-# Bullseye security packages have moved off the live security mirror.
-COPY docker/debian.sources.list /etc/apt/sources.list
+FROM php:8.5-fpm-bookworm@sha256:d3db5340c7ecfb1e3a26af5d3d9de8b4e160cdd75692a830b5cb74b0b85db2cf AS base
 
 FROM base AS dependencies
 
@@ -10,10 +8,8 @@ RUN apt-get update \
     && apt-get install -y --no-install-recommends unzip \
     && rm -rf /var/lib/apt/lists/*
 
-# Keep the Composer version used to create the Apache reference image.
-RUN curl -fsS https://getcomposer.org/installer -o /tmp/composer-setup.php \
-    && php /tmp/composer-setup.php --version=2.1.14 --install-dir=/usr/local/bin --filename=composer \
-    && rm /tmp/composer-setup.php
+COPY --from=composer /usr/bin/composer /usr/local/bin/composer
+ENV COMPOSER_ALLOW_SUPERUSER=1
 
 WORKDIR /var/www/html
 COPY composer.json composer.lock ./

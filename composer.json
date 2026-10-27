@@ -26,12 +26,18 @@
         "source": "https://github.com/picocms/Pico"
     },
     "require": {
+        "php": "^8.5",
         "picocms/pico": "^2.1",
         "picocms/pico-theme": "^2.1",
         "picocms/pico-deprecated": "^2.1",
         "picocms/composer-installer": "^1.0",
         "iridescent-dev/pico-toc-plugin": "^2.0",
         "iridescent-dev/pico-multilanguage-plugin": "^1.0"
+    },
+    "config": {
+        "allow-plugins": {
+            "picocms/composer-installer": true
+        }
     },
     "minimum-stability": "beta",
     "prefer-stable": true

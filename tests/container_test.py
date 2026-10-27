@@ -21,7 +21,10 @@ def docker(*args, input=None, check=True):
     )
     if check and result.returncode:
         raise AssertionError(f"docker {' '.join(args)}: {result.stderr or result.stdout}")
-    return result.stdout.strip()
+    output = result.stdout
+    if args and args[0] == "logs":
+        output += result.stderr
+    return output.strip()
 
 
 def require(condition, message):
@@ -118,6 +121,10 @@ def page_checks(container, reference):
         require(status == expected, f"{path}: expected {expected}, got {status}")
         require(b"MinecraftPlus" in body, f"{path}: not a rendered Pico page")
         require(b"<?php" not in body, f"{path}: PHP source leaked")
+        if path == "/pl":
+            require(b'id="dlaczego-powsta-ten-projekt"' in body
+                    and b'href="#dlaczego-powsta-ten-projekt"' in body,
+                    "PHP upgrade changed existing Polish heading anchors")
         if reference:
             old_status, _, old_body = reference.request(path)
             require((status, body) == (old_status, old_body), f"Apache/nginx response differs: {path}")
@@ -222,6 +229,14 @@ def health_checks(container):
     raise AssertionError("Docker healthcheck did not become healthy")
 
 
+def runtime_checks(container):
+    version = docker("exec", container.id, "php", "-r", "echo PHP_VERSION;")
+    require(version.startswith("8.5."), f"Expected PHP 8.5, got {version}")
+    logs = docker("logs", container.id)
+    for marker in ("PHP Fatal error:", "PHP Parse error:", "PHP Warning:", "PHP Notice:"):
+        require(marker not in logs, f"Runtime diagnostic found: {marker}\n{logs[-6000:]}")
+
+
 def lifecycle_checks(image):
     for server, pid_file in (("nginx", "/run/nginx.pid"), ("PHP-FPM", "/usr/local/var/run/php-fpm.pid")):
         with running(image) as container:
@@ -237,7 +252,7 @@ def lifecycle_checks(image):
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("image", help="locally built nginx image")
-    parser.add_argument("--reference", help="optional Apache image built from the same source and lock file")
+    parser.add_argument("--reference", help="optional previous image for byte-for-byte page comparisons")
     args = parser.parse_args()
     with ExitStack() as stack:
         reference = stack.enter_context(running(args.reference)) if args.reference else None
@@ -247,6 +262,7 @@ def main():
             ("assets and video ranges", lambda: asset_checks(container)),
             ("file protection and plugin overrides", lambda: security_checks(container)),
             ("application healthcheck", lambda: health_checks(container)),
+            ("PHP version and runtime diagnostics", lambda: runtime_checks(container)),
         ):
             check()
             print(f"PASS: {name}", flush=True)

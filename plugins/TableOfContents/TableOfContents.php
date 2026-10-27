@@ -281,7 +281,15 @@ class TableOfContents extends AbstractPicoPlugin
         // replace non letter or digits by -
         $text = preg_replace('~[^\pL\d]+~u', '-', $text);
         // transliterate
-        $text = iconv('utf-8', 'us-ascii//TRANSLIT', $text);
+        // Preserve existing public anchors: PHP 8 uses C.UTF-8 by default,
+        // whose transliteration differs from the previous C locale.
+        $previousLocale = setlocale(LC_CTYPE, 0);
+        setlocale(LC_CTYPE, 'C');
+        try {
+            $text = iconv('utf-8', 'us-ascii//TRANSLIT', $text);
+        } finally {
+            setlocale(LC_CTYPE, $previousLocale);
+        }
         // remove unwanted characters
         $text = preg_replace('~[^-\w]+~', '', $text);
         // trim

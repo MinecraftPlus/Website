@@ -11,8 +11,8 @@
  */
 
 // check PHP platform requirements
-if (PHP_VERSION_ID < 50306) {
-    die('Pico requires PHP 5.3.6 or above to run');
+if (PHP_VERSION_ID < 80500) {
+    die('This website requires PHP 8.5 or above to run');
 }
 if (!extension_loaded('dom')) {
     die("Pico requires the PHP extension 'dom' to run");
