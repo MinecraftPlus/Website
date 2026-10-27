@@ -1,0 +1,13 @@
+.git
+.github
+.agents
+.codex
+.aws
+vendor
+composer.phar
+tests
+README.md
+.htaccess
+*.log
+Thumbs.db
+.DS_Store

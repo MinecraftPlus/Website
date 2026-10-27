@@ -22,7 +22,7 @@ if (!extension_loaded('mbstring')) {
 }
 
 // Normalize the public protocol and port reported by a trusted reverse proxy.
-// Pico otherwise combines X-Forwarded-Proto with Apache's internal port.
+// Pico otherwise combines X-Forwarded-Proto with the web server's internal port.
 if (!empty($_SERVER['HTTP_X_FORWARDED_PROTO'])) {
     $forwardedProtocols = explode(',', $_SERVER['HTTP_X_FORWARDED_PROTO']);
     $forwardedProtocol = strtolower(trim($forwardedProtocols[0]));

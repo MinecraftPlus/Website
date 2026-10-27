@@ -9,6 +9,8 @@ on:
 jobs:
   docker:
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
     steps:
       -
         name: Checkout
@@ -18,21 +20,37 @@ jobs:
         id: meta
         uses: docker/metadata-action@v4
         with:
-          images: name/app
+          images: minecraftplus/website
           tags: |
-            type=raw,value={{date 'YYYYMMDD'}}
+            type=raw,value=latest,enable={{is_default_branch}}
+            type=raw,value={{date 'YYYYMMDD-HHmmss'}}
+      -
+        name: Build candidate
+        uses: docker/build-push-action@v3
+        with:
+          context: .
+          load: true
+          push: false
+          tags: |
+            ${{ steps.meta.outputs.tags }}
+            minecraftplus/website:ci
+          labels: ${{ steps.meta.outputs.labels }}
+      -
+        name: Test candidate
+        run: python3 -u tests/container_test.py minecraftplus/website:ci
       -
         name: Login to DockerHub
-        if: github.event_name != 'pull_request'
+        if: github.event_name == 'push' && github.ref == 'refs/heads/master'
         uses: docker/login-action@v2
         with:
           username: ${{ secrets.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_TOKEN }}
       -
-        name: Build and push
-        uses: docker/build-push-action@v3
-        with:
-          context: .
-          push: ${{ github.event_name != 'pull_request' }}
-          tags: ${{ steps.meta.outputs.tags }}
-          labels: ${{ steps.meta.outputs.labels }}
+        name: Push tested image
+        if: github.event_name == 'push' && github.ref == 'refs/heads/master'
+        env:
+          IMAGE_TAGS: ${{ steps.meta.outputs.tags }}
+        run: |
+          while IFS= read -r tag; do
+            if [ -n "$tag" ]; then docker push "$tag"; fi
+          done <<< "$IMAGE_TAGS"
